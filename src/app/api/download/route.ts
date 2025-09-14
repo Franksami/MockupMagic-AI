@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { authenticateUserServerSide } from '@/lib/whop-sdk';
 import { api } from '../../../../convex/_generated/api';
 import { ConvexHttpClient } from 'convex/browser';
+import { authenticateUserServerSide } from '@/lib/auth';
 
 const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 

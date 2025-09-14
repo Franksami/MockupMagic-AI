@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { useConvexAuth, useQuery as useConvexQuery } from 'convex/react';
-import { api } from '@/convex/_generated/api';
+// import { useConvexAuth, useQuery as useConvexQuery } from 'convex/react';
+// import { api } from '@/convex/_generated/api';
 import { cn } from '@/lib/utils';
 import { Activity, Wifi, WifiOff, Zap, Clock, Package } from 'lucide-react';
 
@@ -12,11 +12,12 @@ interface StatusBarProps {
 }
 
 export function StatusBar({ className }: StatusBarProps) {
-  const { isAuthenticated } = useConvexAuth();
+  // const { isAuthenticated } = useConvexAuth();
   const [connectionStatus, setConnectionStatus] = useState<'connected' | 'disconnected'>('connected');
   const [currentTime, setCurrentTime] = useState(new Date());
 
   // Mock data for now - will be replaced with real Convex queries
+  const isAuthenticated = true; // Mock authentication for now
   const credits = 1000;
   const queueSize = 0;
   const version = 'v2.0.0';

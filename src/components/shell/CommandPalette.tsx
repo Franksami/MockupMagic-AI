@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import {
   Search,
@@ -303,103 +304,150 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
 
   if (!isOpen) return null;
 
-  let commandIndex = -1;
+  const commandIndex = -1;
 
   return (
-    <>
-      {/* Backdrop */}
-      <div
-        className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
-        onClick={onClose}
-      />
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.2 }}
+      >
+        {/* Backdrop */}
+        <motion.div
+          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
+          onClick={onClose}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        />
 
-      {/* Command Palette */}
-      <div className="fixed inset-x-0 top-[20%] z-50 mx-auto max-w-2xl px-4">
-        <div className="overflow-hidden rounded-xl border bg-background/95 backdrop-blur shadow-2xl">
+        {/* Command Palette */}
+        <motion.div 
+          className="fixed inset-x-0 top-[20%] z-50 mx-auto max-w-2xl px-4"
+          initial={{ opacity: 0, scale: 0.95, y: -20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.95, y: -20 }}
+          transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+        >
+          <div className="overflow-hidden rounded-xl glass-modal shadow-2xl">
           {/* Search Input */}
-          <div className="flex items-center border-b px-4">
-            <Search className="h-5 w-5 text-muted-foreground" />
+          <motion.div 
+            className="flex items-center border-b border-white/10 px-4"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+          >
+            <Search className="h-5 w-5 text-orange-400" />
             <input
               ref={inputRef}
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Type a command or search..."
-              className="flex-1 bg-transparent px-3 py-4 text-sm outline-none placeholder:text-muted-foreground"
+              className="flex-1 bg-transparent px-3 py-4 text-sm text-white outline-none placeholder:text-gray-400"
             />
-            <kbd className="hidden sm:inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground">
+            <kbd className="hidden sm:inline-flex h-5 select-none items-center gap-1 rounded border border-orange-500/30 bg-orange-500/10 px-1.5 font-mono text-[10px] font-medium text-orange-300">
               ESC
             </kbd>
-          </div>
+          </motion.div>
 
           {/* Command List */}
           <div ref={listRef} className="max-h-[400px] overflow-y-auto p-2">
             {Object.keys(groupedCommands).length === 0 ? (
-              <div className="py-8 text-center text-sm text-muted-foreground">
+              <motion.div 
+                className="py-8 text-center text-sm text-gray-400"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              >
                 No results found for "{search}"
-              </div>
+              </motion.div>
             ) : (
-              Object.entries(groupedCommands).map(([category, categoryCommands]) => (
-                <div key={category}>
-                  <div className="px-2 py-1.5 text-xs font-medium text-muted-foreground">
+              Object.entries(groupedCommands).map(([category, categoryCommands], categoryIndex) => (
+                <motion.div 
+                  key={category}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.2 + categoryIndex * 0.1 }}
+                >
+                  <div className="px-2 py-1.5 text-xs font-medium text-orange-300">
                     {category}
                   </div>
-                  {categoryCommands.map((command) => {
+                  {categoryCommands.map((command, commandIndex) => {
                     commandIndex++;
                     const isSelected = commandIndex === selectedIndex;
                     const Icon = command.icon;
 
                     return (
-                      <button
+                      <motion.button
                         key={command.id}
                         data-command-item
                         onClick={command.action}
                         className={cn(
-                          "flex w-full items-center gap-3 rounded-lg px-2 py-2 text-sm transition-colors",
+                          "flex w-full items-center gap-3 rounded-lg px-2 py-2 text-sm transition-all duration-200",
                           isSelected
-                            ? "bg-accent text-accent-foreground"
-                            : "hover:bg-accent/50"
+                            ? "bg-gradient-to-r from-orange-500/20 to-red-500/20 text-white"
+                            : "hover:bg-white/10 text-gray-300 hover:text-white"
                         )}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
                       >
-                        <Icon className="h-4 w-4 shrink-0 text-muted-foreground" />
+                        <Icon className={cn(
+                          "h-4 w-4 shrink-0 transition-colors",
+                          isSelected ? "text-orange-400" : "text-gray-400"
+                        )} />
                         <div className="flex flex-1 flex-col items-start">
                           <span className="font-medium">{command.label}</span>
                           {command.description && (
-                            <span className="text-xs text-muted-foreground">
+                            <span className="text-xs text-gray-400">
                               {command.description}
                             </span>
                           )}
                         </div>
                         {isSelected && (
-                          <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground" />
+                          <motion.div
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            <ArrowRight className="h-4 w-4 shrink-0 text-orange-400" />
+                          </motion.div>
                         )}
-                      </button>
+                      </motion.button>
                     );
                   })}
-                </div>
+                </motion.div>
               ))
             )}
           </div>
 
           {/* Footer */}
-          <div className="flex items-center justify-between border-t px-4 py-2">
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          <motion.div 
+            className="flex items-center justify-between border-t border-white/10 px-4 py-2"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
+          >
+            <div className="flex items-center gap-2 text-xs text-gray-400">
               <Command className="h-3 w-3" />
               <span>Command Palette</span>
             </div>
             <div className="flex items-center gap-2">
-              <kbd className="inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground">
+              <kbd className="inline-flex h-5 select-none items-center gap-1 rounded border border-orange-500/30 bg-orange-500/10 px-1.5 font-mono text-[10px] font-medium text-orange-300">
                 ↑↓
               </kbd>
-              <span className="text-xs text-muted-foreground">Navigate</span>
-              <kbd className="inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground">
+              <span className="text-xs text-gray-400">Navigate</span>
+              <kbd className="inline-flex h-5 select-none items-center gap-1 rounded border border-orange-500/30 bg-orange-500/10 px-1.5 font-mono text-[10px] font-medium text-orange-300">
                 ↵
               </kbd>
-              <span className="text-xs text-muted-foreground">Select</span>
+              <span className="text-xs text-gray-400">Select</span>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
-    </>
+      </motion.div>
+    </motion.div>
+    </AnimatePresence>
   );
 }

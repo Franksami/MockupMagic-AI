@@ -1,1 +1,0 @@
-export { TemplateMarketplace } from './TemplateMarketplace';

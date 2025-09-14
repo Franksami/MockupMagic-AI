@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { authenticateUserServerSide } from '@/lib/whop-sdk';
 import { api } from '../../../../convex/_generated/api';
 import { ConvexHttpClient } from 'convex/browser';
+import { authenticateUserServerSide } from '@/lib/auth';
 
 const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
@@ -172,7 +172,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     }
 
     // Get file info from Convex
-    const fileInfo = await convex.query(api.functions.files.getFileInfo, { storageId });
+    const fileInfo = await convex.query(api.functions.files.getFileInfo, { storageId: storageId as any });
 
     if (!fileInfo) {
       return NextResponse.json({

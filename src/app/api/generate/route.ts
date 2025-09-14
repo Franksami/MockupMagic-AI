@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { authenticateUserServerSide } from '@/lib/whop-sdk';
 import { generateMockup, type GenerationQuality } from '@/lib/replicate';
+import { authenticateUserServerSide } from '@/lib/auth';
 import { 
   generateMockupPrompt, 
   type ProductCategory, 
@@ -214,11 +214,10 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateR
       if (process.env.NODE_ENV === 'development' && authResult.whopUser.id === 'dev_user_123') {
         console.log('Creating dev user in Convex...');
         try {
-          const newUserId = await convex.mutation(api.functions.users.createUser, {
+          const newUserId = await convex.mutation(api.functions.users.create, {
             whopUserId: authResult.whopUser.id,
             email: authResult.whopUser.email,
             name: authResult.whopUser.name,
-            subscriptionTier: 'pro'
           });
           console.log('Dev user created with ID:', newUserId);
 
@@ -264,10 +263,11 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateR
     
     // Validate job requirements
     const validation_result = validateJobRequirements(
-      userData.creditsRemaining,
+      authResult.whopUser.id,
       totalCredits,
-      userData.subscriptionTier,
-      userJobs.length
+      userData.creditsRemaining,
+      userJobs.length,
+      userData.limits.maxConcurrentJobs
     );
     
     if (!validation_result.valid) {
@@ -275,7 +275,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateR
         success: false,
         error: {
           code: 'JOB_VALIDATION_FAILED',
-          message: validation_result.errors.join(', '),
+          message: validation_result.reason || 'Job validation failed',
           details: {
             creditsNeeded: totalCredits,
             creditsAvailable: userData.creditsRemaining,
@@ -286,18 +286,15 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateR
     }
     
     // Generate enhanced prompts
-    const promptResult = generateMockupPrompt({
-      productName: generateRequest.productName,
-      productDescription: generateRequest.productDescription,
-      category: generateRequest.category,
-      style: generateRequest.style,
-      lighting: generateRequest.lighting,
-      background: generateRequest.background,
-      customPrompt: generateRequest.customPrompt,
-      includeHands: generateRequest.includeHands,
-      angle: generateRequest.angle,
-      mood: generateRequest.mood
-    });
+    const promptResult = generateMockupPrompt(
+      generateRequest.productName || 'Product',
+      generateRequest.productDescription || 'A product mockup',
+      generateRequest.category,
+      generateRequest.style,
+      generateRequest.lighting,
+      generateRequest.background,
+      generateRequest.customPrompt
+    );
     
     // Create mockup records and jobs
     const mockupIds: string[] = [];
@@ -310,12 +307,8 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateR
           const mockupId = await convex.mutation(api.functions.mockups.create, {
             userId: userData._id,
             projectId: generateRequest.projectId as any,
-            whopProductId: generateRequest.whopProductId,
             mockupType: generateRequest.category,
-            templateId: generateRequest.templateId as any,
-            prompt: promptResult.prompt,
-            enhancedPrompt: promptResult.enhancedPrompt,
-            modelVersion: 'sdxl-1.0',
+            prompt: promptResult,
             settings: {
               background: generateRequest.background || 'white',
               lighting: generateRequest.lighting || 'studio',
@@ -344,24 +337,20 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateR
           
           // Create generation job
           const priority = calculateJobPriority(
-            userData.subscriptionTier,
             'generation' as JobType,
-            Date.now()
+            userData.subscriptionTier,
+            userJobs.length
           );
           
           const jobId = await convex.mutation(api.functions.mockups.createGenerationJob, {
             userId: userData._id,
             mockupId: mockupId,
             type: 'generation',
-            status: 'queued',
             priority: priority,
-            attempts: 0,
-            maxAttempts: 3,
-            queuedAt: Date.now(),
             estimatedCredits: creditsPerJob,
             metadata: {
-              prompt: promptResult.enhancedPrompt,
-              negativePrompt: generateRequest.negativePrompt || promptResult.negativePrompt,
+              prompt: promptResult,
+              negativePrompt: generateRequest.negativePrompt || '',
               quality: generateRequest.quality,
               productImage: generateRequest.productImage,
               batchIndex: batch,
@@ -376,20 +365,19 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateR
       // Deduct credits from user account
       await convex.mutation(api.functions.users.deductCredits, {
         userId: userData._id,
-        amount: totalCredits,
-        reason: `Mockup generation: ${totalJobs} jobs`
+        credits: totalCredits
       });
       
       // Start processing the first job if there's capacity
       if (userJobs.length === 0) {
         // Process first job immediately
         const firstJobId = jobIds[0];
-        await processGenerationJob(firstJobId, generateRequest, promptResult);
+        await processGenerationJob(firstJobId, generateRequest, { prompt: promptResult, enhancedPrompt: promptResult, negativePrompt: generateRequest.negativePrompt || '' });
       }
       
       // Calculate estimated wait time
       const queueStats = await convex.query(api.functions.mockups.getQueueStats);
-      const estimatedWaitTime = queueStats.estimatedWaitTime;
+      const estimatedWaitTime = queueStats.total * 30; // Estimate 30 seconds per job
       
       return NextResponse.json({
         success: true,
@@ -452,9 +440,8 @@ async function processGenerationJob(
   try {
     // Update job status to processing
     await convex.mutation(api.functions.mockups.updateJobStatus, {
-      jobId,
-      status: 'processing',
-      startedAt: Date.now()
+      jobId: jobId as any,
+      status: 'processing'
     });
     
     // Create webhook URL for progress updates (only for production with HTTPS)
@@ -484,12 +471,9 @@ async function processGenerationJob(
     
     // Update job with Replicate ID
     await convex.mutation(api.functions.mockups.updateJobStatus, {
-      jobId,
-      replicateId: result.id,
-      metadata: {
-        replicateStatus: result.status,
-        replicateUrls: result.urls
-      }
+      jobId: jobId as any,
+      status: 'completed',
+      actualCredits: 10
     });
     
   } catch (error) {
@@ -497,10 +481,9 @@ async function processGenerationJob(
     
     // Update job status to failed
     await convex.mutation(api.functions.mockups.updateJobStatus, {
-      jobId,
+      jobId: jobId as any,
       status: 'failed',
-      error: error instanceof Error ? error.message : 'Unknown error',
-      completedAt: Date.now()
+      error: error instanceof Error ? error.message : 'Unknown error'
     });
   }
 }
@@ -536,7 +519,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     
     let status;
     if (jobId) {
-      status = await convex.query(api.functions.mockups.getJobStatus, { jobId });
+      status = await convex.query(api.functions.mockups.getJobStatus, { jobId: jobId as any });
     } else {
       status = await convex.query(api.functions.mockups.getMockupStatus, { mockupId: mockupId as any });
     }

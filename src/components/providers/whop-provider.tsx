@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { authenticateUser } from "@/lib/whop-sdk";
+import { authenticateUser, setTokenInStorage, clearTokenFromStorage } from "@/lib/auth";
 
 interface WhopUser {
   id: string;
@@ -28,6 +28,8 @@ interface WhopContextType {
   isAuthenticated: boolean;
   error: string | null;
   refetch: () => Promise<void>;
+  login: () => void;
+  logout: () => void;
 }
 
 const WhopContext = createContext<WhopContextType | undefined>(undefined);
@@ -66,19 +68,23 @@ export function WhopProvider({ children }: WhopProviderProps) {
     }
   };
 
+  const login = () => {
+    // Redirect to Whop OAuth
+    const whopAuthUrl = `https://whop.com/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_WHOP_APP_ID}&redirect_uri=${encodeURIComponent(window.location.origin + '/auth/callback')}&response_type=code&scope=read:user`;
+    window.location.href = whopAuthUrl;
+  };
+
+  const logout = () => {
+    clearTokenFromStorage();
+    setWhopUser(null);
+    setConvexUser(null);
+    setError(null);
+  };
+
   useEffect(() => {
     setMounted(true);
     fetchUser();
   }, []);
-
-  // Prevent hydration mismatch by not rendering until mounted
-  if (!mounted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-primary-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="animate-spin w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full" />
-      </div>
-    );
-  }
 
   const refetch = async () => {
     await fetchUser();
@@ -93,6 +99,8 @@ export function WhopProvider({ children }: WhopProviderProps) {
     isAuthenticated,
     error,
     refetch,
+    login,
+    logout,
   };
 
   return (
