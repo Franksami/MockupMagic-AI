@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "whop-proxy --command 'next dev'",
     "dev:turbo": "whop-proxy --command 'next dev --turbopack'",
-    "build": "next build && convex deploy",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "convex": "convex dev",
