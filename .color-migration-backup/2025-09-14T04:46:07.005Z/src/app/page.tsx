@@ -2,28 +2,7 @@ import { AuthTest } from "@/components/auth-test";
 import Link from "next/link";
 import { Wand2, ArrowRight } from "lucide-react";
 
-interface PageProps {
-  params: Promise<{
-    slug?: string[];
-  }>;
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
-}
-
-export default async function DynamicPage({ params, searchParams }: PageProps) {
-  // Handle different route patterns
-  const resolvedParams = await params;
-  const resolvedSearchParams = await searchParams;
-  const slug = resolvedParams.slug || [];
-  
-  // Log the route being accessed for debugging
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Route accessed:', {
-      slug,
-      searchParams: resolvedSearchParams,
-      fullPath: '/' + slug.join('/'),
-    });
-  }
-  
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <div className="container mx-auto px-4 py-16">
@@ -32,15 +11,9 @@ export default async function DynamicPage({ params, searchParams }: PageProps) {
             MockupMagic AI
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your designs into professional mockups using AI. 
+            Transform your designs into professional mockups using AI.
             Perfect for Whop sellers and digital creators looking to showcase their products.
           </p>
-          {/* Debug info for development */}
-          {process.env.NODE_ENV === 'development' && slug.length > 0 && (
-            <div className="mt-4 text-sm text-yellow-300 bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-3">
-              <strong>Debug Info:</strong> Accessed via path: /{slug.join('/')}
-            </div>
-          )}
         </header>
 
         {/* Authentication Test Section */}

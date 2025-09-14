@@ -85,7 +85,7 @@ export function WhopCreatorCourses({ className = "" }: WhopCreatorCoursesProps) 
     <div className={cn("space-y-6", className)}>
       {/* Header */}
       <div className="text-center">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 via-primary-400 to-pink-400 bg-clip-text text-transparent mb-4">
           Whop Creator Masterclasses
         </h1>
         <p className="text-gray-300 text-lg max-w-2xl mx-auto">
@@ -106,7 +106,7 @@ export function WhopCreatorCourses({ className = "" }: WhopCreatorCoursesProps) 
             <div className="text-sm text-gray-400">Avg Revenue Increase</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-purple-400">$2.1M+</div>
+            <div className="text-2xl font-bold text-primary-400">$2.1M+</div>
             <div className="text-sm text-gray-400">Additional Creator Revenue</div>
           </div>
           <div>
@@ -127,7 +127,7 @@ export function WhopCreatorCourses({ className = "" }: WhopCreatorCoursesProps) 
                 onClick={() => setSelectedCategory(category.key)}
                 className={`px-3 py-2 rounded text-sm transition-colors ${
                   selectedCategory === category.key
-                    ? 'bg-purple-600 text-white'
+                    ? 'bg-primary-600 text-white'
                     : 'text-gray-400 hover:text-white'
                 }`}
               >
@@ -188,7 +188,7 @@ export function WhopCreatorCourses({ className = "" }: WhopCreatorCoursesProps) 
       </LiquidGlassGrid>
 
       {/* Featured Course Spotlight */}
-      <LiquidGlassContainer className="p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20">
+      <LiquidGlassContainer className="p-6 bg-gradient-to-r from-primary-500/10 to-pink-500/10 border border-primary-500/20">
         <div className="flex items-center justify-between">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
@@ -220,7 +220,7 @@ export function WhopCreatorCourses({ className = "" }: WhopCreatorCoursesProps) 
           <div className="text-center ml-6">
             <div className="text-2xl font-bold text-white mb-1">$99</div>
             <div className="text-sm text-gray-400 mb-4">One-time payment</div>
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+            <button className="bg-gradient-to-r from-primary-600 to-pink-600 hover:from-primary-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
               Enroll Now
             </button>
           </div>
@@ -244,7 +244,7 @@ function CourseCard({ course, enrollment, onEnroll, userTier }: CourseCardProps)
       case 'free':
         return { text: 'Free', color: 'bg-green-500/20 text-green-300' };
       case 'pro':
-        return { text: 'Pro Only', color: 'bg-purple-500/20 text-purple-300' };
+        return { text: 'Pro Only', color: 'bg-primary-500/20 text-primary-300' };
       case 'premium':
         return { text: 'Premium', color: 'bg-pink-500/20 text-pink-300' };
       default:
@@ -262,9 +262,9 @@ function CourseCard({ course, enrollment, onEnroll, userTier }: CourseCardProps)
       <LiquidGlassCard className="p-6 h-full">
         <div className="space-y-4">
           {/* Course Preview */}
-          <div className="relative aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg overflow-hidden">
+          <div className="relative aspect-video bg-gradient-to-br from-primary-500/20 to-pink-500/20 rounded-lg overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center">
-              <PlayCircle className="w-12 h-12 text-purple-400" />
+              <PlayCircle className="w-12 h-12 text-primary-400" />
             </div>
 
             {/* Badges */}
@@ -353,7 +353,7 @@ function CourseCard({ course, enrollment, onEnroll, userTier }: CourseCardProps)
 
               {/* Instructor */}
               <div className="text-right">
-                <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-1">
+                <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-pink-500 rounded-full flex items-center justify-center mb-1">
                   <span className="text-white text-xs font-bold">
                     {course.instructor?.name?.charAt(0) || 'I'}
                   </span>
@@ -381,7 +381,7 @@ function CourseCard({ course, enrollment, onEnroll, userTier }: CourseCardProps)
             ) : canAccess ? (
               <button
                 onClick={() => onEnroll(course._id)}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <BookOpen className="w-4 h-4" />
                 {course.price > 0 ? `Enroll for $${course.price}` : 'Enroll Free'}

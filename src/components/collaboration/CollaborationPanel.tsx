@@ -139,7 +139,7 @@ export const CollaborationPanel: React.FC<CollaborationPanelProps> = ({
       {
         id: userId,
         name: userName,
-        color: '#8B5CF6',
+        color: '#FA4616',
         role: 'owner',
         isOnline: true,
         cursorPosition: { x: 50, y: 50 },
@@ -321,7 +321,7 @@ export const CollaborationPanel: React.FC<CollaborationPanelProps> = ({
   const getRoleColor = (role: string) => {
     switch (role) {
       case 'owner': return 'text-yellow-400';
-      case 'editor': return 'text-purple-400';
+      case 'editor': return 'text-primary-400';
       case 'viewer': return 'text-gray-400';
       default: return 'text-gray-400';
     }
@@ -345,7 +345,7 @@ export const CollaborationPanel: React.FC<CollaborationPanelProps> = ({
                   className={cn(
                     'p-2 rounded-lg transition-all',
                     selectedTool === tool.id
-                      ? 'bg-purple-500/30 text-purple-400'
+                      ? 'bg-primary-500/30 text-primary-400'
                       : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
                   )}
                   title={tool.label}
@@ -401,7 +401,7 @@ export const CollaborationPanel: React.FC<CollaborationPanelProps> = ({
                   className={cn(
                     'p-2 rounded transition-all',
                     isVideoOn
-                      ? 'bg-purple-500/20 text-purple-400'
+                      ? 'bg-primary-500/20 text-primary-400'
                       : 'text-gray-400 hover:text-white',
                     !isInCall && 'opacity-50 cursor-not-allowed'
                   )}
@@ -414,7 +414,7 @@ export const CollaborationPanel: React.FC<CollaborationPanelProps> = ({
                   className={cn(
                     'p-2 rounded transition-all',
                     isAudioOn
-                      ? 'bg-purple-500/20 text-purple-400'
+                      ? 'bg-primary-500/20 text-primary-400'
                       : 'text-gray-400 hover:text-white',
                     !isInCall && 'opacity-50 cursor-not-allowed'
                   )}
@@ -427,7 +427,7 @@ export const CollaborationPanel: React.FC<CollaborationPanelProps> = ({
                   className={cn(
                     'p-2 rounded transition-all',
                     isScreenSharing
-                      ? 'bg-purple-500/20 text-purple-400'
+                      ? 'bg-primary-500/20 text-primary-400'
                       : 'text-gray-400 hover:text-white',
                     !isInCall && 'opacity-50 cursor-not-allowed'
                   )}
@@ -554,7 +554,7 @@ export const CollaborationPanel: React.FC<CollaborationPanelProps> = ({
           <LiquidGlassContainer variant="shallow" className="p-4">
             <div className="flex items-center justify-between mb-3">
               <h3 className="text-sm font-medium text-white flex items-center gap-2">
-                <Users className="w-4 h-4 text-purple-400" />
+                <Users className="w-4 h-4 text-primary-400" />
                 Participants ({collaborators.length})
               </h3>
               <button
@@ -613,7 +613,7 @@ export const CollaborationPanel: React.FC<CollaborationPanelProps> = ({
           <LiquidGlassContainer variant="shallow" className="flex-1 flex flex-col">
             <div className="p-4 border-b border-gray-700 flex items-center justify-between">
               <h3 className="text-sm font-medium text-white flex items-center gap-2">
-                <MessageSquare className="w-4 h-4 text-purple-400" />
+                <MessageSquare className="w-4 h-4 text-primary-400" />
                 Chat
               </h3>
               <button
@@ -677,7 +677,7 @@ export const CollaborationPanel: React.FC<CollaborationPanelProps> = ({
                   onChange={(e) => setMessageInput(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
                   placeholder="Type a message..."
-                  className="flex-1 px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors"
+                  className="flex-1 px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors"
                 />
                 <LiquidGlassButton
                   onClick={sendMessage}
@@ -740,12 +740,12 @@ export const CollaborationPanel: React.FC<CollaborationPanelProps> = ({
                     <label className="text-sm text-gray-400 mb-2 block">Permissions</label>
                     <div className="space-y-2">
                       <label className="flex items-center gap-2 cursor-pointer">
-                        <input type="radio" name="permission" defaultChecked className="text-purple-500" />
-                        <Edit className="w-4 h-4 text-purple-400" />
+                        <input type="radio" name="permission" defaultChecked className="text-primary-500" />
+                        <Edit className="w-4 h-4 text-primary-400" />
                         <span className="text-sm text-white">Can edit</span>
                       </label>
                       <label className="flex items-center gap-2 cursor-pointer">
-                        <input type="radio" name="permission" className="text-purple-500" />
+                        <input type="radio" name="permission" className="text-primary-500" />
                         <Eye className="w-4 h-4 text-gray-400" />
                         <span className="text-sm text-white">Can view</span>
                       </label>

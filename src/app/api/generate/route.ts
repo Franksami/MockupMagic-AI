@@ -309,10 +309,10 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateR
           // Create mockup record
           const mockupId = await convex.mutation(api.functions.mockups.create, {
             userId: userData._id,
-            projectId: generateRequest.projectId,
+            projectId: generateRequest.projectId as any,
             whopProductId: generateRequest.whopProductId,
             mockupType: generateRequest.category,
-            templateId: generateRequest.templateId,
+            templateId: generateRequest.templateId as any,
             prompt: promptResult.prompt,
             enhancedPrompt: promptResult.enhancedPrompt,
             modelVersion: 'sdxl-1.0',
@@ -406,7 +406,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<GenerateR
       // Cleanup on failure - delete created mockups
       for (const mockupId of mockupIds) {
         try {
-          await convex.mutation(api.functions.mockups.deleteMockup, { id: mockupId });
+          await convex.mutation(api.functions.mockups.deleteMockup, { id: mockupId as any });
         } catch (cleanupError) {
           console.error('Cleanup error:', cleanupError);
         }
@@ -467,7 +467,7 @@ async function processGenerationJob(
     const webhookUrl = appUrl.startsWith('https://') ? `${appUrl}/api/webhooks/replicate` : undefined;
     
     // Generate mockup with Replicate
-    const replicateInput = {
+    const replicateInput: any = {
       prompt: promptResult.enhancedPrompt,
       negative_prompt: promptResult.negativePrompt,
       image: request.productImage,
@@ -538,7 +538,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     if (jobId) {
       status = await convex.query(api.functions.mockups.getJobStatus, { jobId });
     } else {
-      status = await convex.query(api.functions.mockups.getMockupStatus, { mockupId: mockupId! });
+      status = await convex.query(api.functions.mockups.getMockupStatus, { mockupId: mockupId as any });
     }
     
     if (!status) {

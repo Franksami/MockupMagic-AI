@@ -125,7 +125,7 @@ export function TemplateSubmissionModal({
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-2">
-          <Sparkles className="w-6 h-6 text-purple-400" />
+          <Sparkles className="w-6 h-6 text-primary-400" />
           <h2 className="text-2xl font-bold text-white">
             Share Template with Whop Community
           </h2>
@@ -144,7 +144,7 @@ export function TemplateSubmissionModal({
                   <div key={item.step} className="flex items-center">
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
                       currentStep === item.step || ['submitting', 'success', 'error'].includes(currentStep)
-                        ? 'bg-purple-600 text-white'
+                        ? 'bg-primary-600 text-white'
                         : index < ['select', 'details', 'pricing', 'review'].indexOf(currentStep)
                         ? 'bg-green-600 text-white'
                         : 'bg-gray-700 text-gray-400'
@@ -192,14 +192,14 @@ export function TemplateSubmissionModal({
                           onClick={() => setSelectedTemplateId(template._id)}
                           className={`p-4 rounded-lg border-2 text-left transition-all ${
                             selectedTemplateId === template._id
-                              ? 'border-purple-500 bg-purple-500/10'
+                              ? 'border-primary-500 bg-primary-500/10'
                               : 'border-gray-600 hover:border-gray-500'
                           }`}
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >
-                          <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded mb-3 flex items-center justify-center">
-                            <Sparkles className="w-8 h-8 text-purple-400" />
+                          <div className="aspect-video bg-gradient-to-br from-primary-500/20 to-pink-500/20 rounded mb-3 flex items-center justify-center">
+                            <Sparkles className="w-8 h-8 text-primary-400" />
                           </div>
                           <h4 className="font-medium text-white mb-1">{template.name}</h4>
                           <p className="text-sm text-gray-400 mb-2">{template.category}</p>
@@ -223,7 +223,7 @@ export function TemplateSubmissionModal({
                     <button
                       onClick={() => setCurrentStep('details')}
                       disabled={!selectedTemplateId}
-                      className="bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg transition-colors"
+                      className="bg-primary-600 hover:bg-primary-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg transition-colors"
                     >
                       Continue
                     </button>
@@ -258,7 +258,7 @@ export function TemplateSubmissionModal({
                       value={submissionData.title}
                       onChange={(e) => setSubmissionData(prev => ({ ...prev, title: e.target.value }))}
                       placeholder="High-Converting Product Mockup for Digital Courses"
-                      className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none"
+                      className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-primary-500 focus:outline-none"
                     />
                   </div>
 
@@ -271,7 +271,7 @@ export function TemplateSubmissionModal({
                       onChange={(e) => setSubmissionData(prev => ({ ...prev, description: e.target.value }))}
                       placeholder="Describe how this template helped your Whop store, conversion improvements, best use cases..."
                       rows={4}
-                      className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none resize-none"
+                      className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-primary-500 focus:outline-none resize-none"
                     />
                   </div>
 
@@ -298,7 +298,7 @@ export function TemplateSubmissionModal({
                                 }));
                               }
                             }}
-                            className="w-4 h-4 text-purple-500 rounded"
+                            className="w-4 h-4 text-primary-500 rounded"
                           />
                           <span className="text-sm text-gray-300 capitalize">
                             {category.replace('-', ' ')}
@@ -320,7 +320,7 @@ export function TemplateSubmissionModal({
                         tags: e.target.value.split(',').map(t => t.trim()).filter(Boolean)
                       }))}
                       placeholder="ecommerce, conversion, professional, modern"
-                      className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none"
+                      className="w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-primary-500 focus:outline-none"
                     />
                   </div>
 
@@ -334,7 +334,7 @@ export function TemplateSubmissionModal({
                     <button
                       onClick={() => setCurrentStep('pricing')}
                       disabled={!submissionData.title || !submissionData.description || submissionData.storeCategories.length === 0}
-                      className="bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg transition-colors"
+                      className="bg-primary-600 hover:bg-primary-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg transition-colors"
                     >
                       Continue
                     </button>
@@ -420,8 +420,8 @@ export function TemplateSubmissionModal({
 
                   {/* Pricing Input for Premium */}
                   {submissionData.shareType === 'premium' && (
-                    <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
-                      <label className="block text-sm text-purple-300 mb-2">
+                    <div className="bg-primary-500/10 border border-primary-500/20 rounded-lg p-4">
+                      <label className="block text-sm text-primary-300 mb-2">
                         Template Price (USD) *
                       </label>
                       <div className="relative">
@@ -435,11 +435,11 @@ export function TemplateSubmissionModal({
                             ...prev,
                             price: parseInt(e.target.value) || 0
                           }))}
-                          className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-purple-500 focus:outline-none"
+                          className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-primary-500 focus:outline-none"
                           placeholder="25"
                         />
                       </div>
-                      <p className="text-xs text-purple-300 mt-2">
+                      <p className="text-xs text-primary-300 mt-2">
                         You'll earn 90% (${(submissionData.price * 0.9).toFixed(2)}) per sale
                       </p>
                     </div>
@@ -455,7 +455,7 @@ export function TemplateSubmissionModal({
                     <button
                       onClick={() => setCurrentStep('review')}
                       disabled={submissionData.shareType === 'premium' && submissionData.price < 5}
-                      className="bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg transition-colors"
+                      className="bg-primary-600 hover:bg-primary-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg transition-colors"
                     >
                       Review
                     </button>
@@ -491,7 +491,7 @@ export function TemplateSubmissionModal({
                       <span className="text-gray-300">Share Type:</span>
                       <span className={`font-medium ${
                         submissionData.shareType === 'free' ? 'text-green-400' :
-                        submissionData.shareType === 'premium' ? 'text-purple-400' :
+                        submissionData.shareType === 'premium' ? 'text-primary-400' :
                         'text-pink-400'
                       }`}>
                         {submissionData.shareType.charAt(0).toUpperCase() + submissionData.shareType.slice(1)}
@@ -556,7 +556,7 @@ export function TemplateSubmissionModal({
                     animate={{ rotate: 360 }}
                     transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
                   >
-                    <Sparkles className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                    <Sparkles className="w-12 h-12 text-primary-400 mx-auto mb-4" />
                   </motion.div>
                   <h3 className="text-xl font-semibold text-white mb-2">Submitting Template</h3>
                   <p className="text-gray-300">Adding your template to the community...</p>
@@ -598,7 +598,7 @@ export function TemplateSubmissionModal({
                   <div className="space-y-3">
                     <button
                       onClick={() => setCurrentStep('review')}
-                      className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition-colors"
+                      className="w-full bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg transition-colors"
                     >
                       Try Again
                     </button>

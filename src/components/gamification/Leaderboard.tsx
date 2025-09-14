@@ -270,10 +270,10 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({
       <LiquidGlassContainer variant="shallow" glow className="p-4">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-            <Target className="w-5 h-5 text-purple-400" />
+            <Target className="w-5 h-5 text-primary-400" />
             Active Milestones
           </h3>
-          <button className="text-sm text-purple-400 hover:text-purple-300 transition-colors">
+          <button className="text-sm text-primary-400 hover:text-primary-300 transition-colors">
             View All
           </button>
         </div>
@@ -296,11 +296,11 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({
                 <div className="flex items-start gap-3">
                   <div className={cn(
                     'p-2 rounded-lg',
-                    milestone.completed ? 'bg-green-500/20' : 'bg-purple-500/20'
+                    milestone.completed ? 'bg-green-500/20' : 'bg-primary-500/20'
                   )}>
                     <milestone.icon className={cn(
                       'w-4 h-4',
-                      milestone.completed ? 'text-green-400' : 'text-purple-400'
+                      milestone.completed ? 'text-green-400' : 'text-primary-400'
                     )} />
                   </div>
                   <div className="flex-1">
@@ -312,7 +312,7 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({
                         <span className="text-gray-400">
                           {milestone.current} / {milestone.target}
                         </span>
-                        <span className="text-purple-400">
+                        <span className="text-primary-400">
                           {Math.round((milestone.current / milestone.target) * 100)}%
                         </span>
                       </div>
@@ -322,7 +322,7 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({
                             'h-full rounded-full',
                             milestone.completed
                               ? 'bg-gradient-to-r from-green-500 to-emerald-500'
-                              : 'bg-gradient-to-r from-purple-500 to-pink-500'
+                              : 'bg-gradient-to-r from-primary-500 to-pink-500'
                           )}
                           initial={{ width: 0 }}
                           animate={{ width: `${(milestone.current / milestone.target) * 100}%` }}
@@ -368,7 +368,7 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({
                 onClick={() => setShowOnlyFollowing(!showOnlyFollowing)}
                 className={cn(
                   'px-3 py-1.5 text-sm',
-                  showOnlyFollowing && 'bg-purple-500/30'
+                  showOnlyFollowing && 'bg-primary-500/30'
                 )}
               >
                 <Users className="w-4 h-4 mr-2" />
@@ -386,7 +386,7 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({
                 className={cn(
                   'flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm transition-all',
                   selectedCategory === category.id
-                    ? 'bg-purple-500/30 text-white'
+                    ? 'bg-primary-500/30 text-white'
                     : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
                 )}
               >
@@ -406,7 +406,7 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({
                   className={cn(
                     'px-3 py-1 rounded text-xs transition-all',
                     timeframe === tf.id
-                      ? 'bg-purple-500/20 text-purple-400'
+                      ? 'bg-primary-500/20 text-primary-400'
                       : 'text-gray-500 hover:text-gray-300'
                   )}
                 >
@@ -423,7 +423,7 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search creators..."
-                className="pl-10 pr-4 py-1.5 bg-gray-800/50 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors"
+                className="pl-10 pr-4 py-1.5 bg-gray-800/50 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors"
               />
             </div>
           </div>
@@ -440,7 +440,7 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({
                 animate={{ rotate: 360 }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
               >
-                <Trophy className="w-12 h-12 text-purple-400" />
+                <Trophy className="w-12 h-12 text-primary-400" />
               </motion.div>
             </div>
           ) : (
@@ -476,8 +476,8 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({
                       <LiquidGlassCard
                         variant="shallow"
                         className={cn(
-                          'p-3 cursor-pointer hover:bg-purple-500/10 transition-all',
-                          entry.isCurrentUser && 'border-purple-500/50 bg-purple-500/10',
+                          'p-3 cursor-pointer hover:bg-primary-500/10 transition-all',
+                          entry.isCurrentUser && 'border-primary-500/50 bg-primary-500/10',
                           isTop3 && 'border-yellow-500/30'
                         )}
                         onClick={() => onUserSelect?.(entry.id)}
@@ -497,14 +497,14 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({
 
                           {/* User Info */}
                           <div className="flex items-center gap-3 flex-1">
-                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-pink-500 flex items-center justify-center text-white font-bold">
                               {entry.username[0]}
                             </div>
                             <div>
                               <div className="flex items-center gap-2">
                                 <span className="text-white font-medium">{entry.username}</span>
                                 {entry.isCurrentUser && (
-                                  <span className="text-xs px-2 py-0.5 bg-purple-500/30 text-purple-400 rounded">
+                                  <span className="text-xs px-2 py-0.5 bg-primary-500/30 text-primary-400 rounded">
                                     You
                                   </span>
                                 )}
@@ -546,7 +546,7 @@ export const Leaderboard: React.FC<LeaderboardProps> = ({
                           <div className={cn(
                             'px-2 py-1 rounded text-xs font-medium',
                             entry.tier === 'diamond' && 'bg-cyan-500/20 text-cyan-400',
-                            entry.tier === 'platinum' && 'bg-purple-500/20 text-purple-400',
+                            entry.tier === 'platinum' && 'bg-primary-500/20 text-primary-400',
                             entry.tier === 'gold' && 'bg-yellow-500/20 text-yellow-400',
                             entry.tier === 'silver' && 'bg-gray-500/20 text-gray-300',
                             entry.tier === 'bronze' && 'bg-orange-500/20 text-orange-400'

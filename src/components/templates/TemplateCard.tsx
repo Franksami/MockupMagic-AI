@@ -54,7 +54,7 @@ export function TemplateCard({
   const categoryColors: Record<ProductCategory, string> = {
     digital: "bg-blue-500/20 text-blue-300 border-blue-500/30",
     physical: "bg-green-500/20 text-green-300 border-green-500/30", 
-    apparel: "bg-purple-500/20 text-purple-300 border-purple-500/30",
+    apparel: "bg-primary-500/20 text-primary-300 border-primary-500/30",
     books: "bg-orange-500/20 text-orange-300 border-orange-500/30",
     courses: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
     branding: "bg-pink-500/20 text-pink-300 border-pink-500/30"

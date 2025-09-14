@@ -168,7 +168,7 @@ Please describe what you were doing when this error occurred:
                 {errorDetails.retryable && retryCount < maxRetries && (
                   <LiquidGlassButton
                     onClick={this.handleRetry}
-                    className="w-full py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium"
+                    className="w-full py-2 bg-gradient-to-r from-blue-500 to-primary-500 text-white font-medium"
                   >
                     <RefreshCw className="w-4 h-4 mr-2" />
                     Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}

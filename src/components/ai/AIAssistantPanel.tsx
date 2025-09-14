@@ -199,7 +199,7 @@ export const AIAssistantPanel: React.FC<AIAssistantPanelProps> = ({
         <div className="flex items-center justify-between p-4 border-b border-gray-700">
           <div className="flex items-center gap-2">
             <div className="relative">
-              <Brain className="w-6 h-6 text-purple-400" />
+              <Brain className="w-6 h-6 text-primary-400" />
               <motion.div
                 className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full"
                 animate={{ scale: [1, 1.2, 1] }}
@@ -232,14 +232,14 @@ export const AIAssistantPanel: React.FC<AIAssistantPanelProps> = ({
                       key={action.action}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg hover:from-purple-500/30 hover:to-pink-500/30 transition-all"
+                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-gradient-to-r from-primary-500/20 to-pink-500/20 rounded-lg hover:from-primary-500/30 hover:to-pink-500/30 transition-all"
                       onClick={() => {
                         if (action.action === 'suggest') {
                           generateSmartSuggestions();
                         }
                       }}
                     >
-                      <action.icon className="w-4 h-4 text-purple-400" />
+                      <action.icon className="w-4 h-4 text-primary-400" />
                       <span className="text-sm text-white">{action.label}</span>
                     </motion.button>
                   ))}
@@ -268,12 +268,12 @@ export const AIAssistantPanel: React.FC<AIAssistantPanelProps> = ({
                       >
                         <LiquidGlassCard
                           variant="shallow"
-                          className="p-3 cursor-pointer hover:bg-purple-500/10 transition-all"
+                          className="p-3 cursor-pointer hover:bg-primary-500/10 transition-all"
                           onClick={() => onSuggestionApply?.(suggestion)}
                         >
                           <div className="flex items-start gap-3">
-                            <div className="p-2 bg-purple-500/20 rounded-lg">
-                              <suggestion.icon className="w-4 h-4 text-purple-400" />
+                            <div className="p-2 bg-primary-500/20 rounded-lg">
+                              <suggestion.icon className="w-4 h-4 text-primary-400" />
                             </div>
                             <div className="flex-1">
                               <div className="flex items-center justify-between">
@@ -284,7 +284,7 @@ export const AIAssistantPanel: React.FC<AIAssistantPanelProps> = ({
                                   </div>
                                   <div className="w-12 h-1 bg-gray-700 rounded-full overflow-hidden">
                                     <div
-                                      className="h-full bg-gradient-to-r from-purple-500 to-pink-500"
+                                      className="h-full bg-gradient-to-r from-primary-500 to-pink-500"
                                       style={{ width: `${suggestion.confidence * 100}%` }}
                                     />
                                   </div>
@@ -325,7 +325,7 @@ export const AIAssistantPanel: React.FC<AIAssistantPanelProps> = ({
                         )}
                       >
                         {message.role === 'assistant' && (
-                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-500 to-pink-500 flex items-center justify-center">
                             <Brain className="w-4 h-4 text-white" />
                           </div>
                         )}
@@ -333,7 +333,7 @@ export const AIAssistantPanel: React.FC<AIAssistantPanelProps> = ({
                           className={cn(
                             'max-w-[80%] p-3 rounded-lg',
                             message.role === 'user'
-                              ? 'bg-purple-500/20 text-white'
+                              ? 'bg-primary-500/20 text-white'
                               : 'bg-gray-800/50 text-gray-200'
                           )}
                         >
@@ -344,9 +344,9 @@ export const AIAssistantPanel: React.FC<AIAssistantPanelProps> = ({
                                 <button
                                   key={suggestion.id}
                                   onClick={() => onSuggestionApply?.(suggestion)}
-                                  className="flex items-center gap-2 w-full p-2 rounded hover:bg-purple-500/10 transition-colors"
+                                  className="flex items-center gap-2 w-full p-2 rounded hover:bg-primary-500/10 transition-colors"
                                 >
-                                  <suggestion.icon className="w-4 h-4 text-purple-400" />
+                                  <suggestion.icon className="w-4 h-4 text-primary-400" />
                                   <span className="text-xs text-gray-300">{suggestion.title}</span>
                                 </button>
                               ))}
@@ -366,12 +366,12 @@ export const AIAssistantPanel: React.FC<AIAssistantPanelProps> = ({
                         animate={{ y: 0, opacity: 1 }}
                         className="flex gap-3"
                       >
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-500 to-pink-500 flex items-center justify-center">
                           <Brain className="w-4 h-4 text-white" />
                         </div>
                         <div className="bg-gray-800/50 p-3 rounded-lg">
                           <div className="flex items-center gap-2">
-                            <Loader2 className="w-4 h-4 animate-spin text-purple-400" />
+                            <Loader2 className="w-4 h-4 animate-spin text-primary-400" />
                             <span className="text-sm text-gray-400">Thinking...</span>
                           </div>
                         </div>
@@ -391,7 +391,7 @@ export const AIAssistantPanel: React.FC<AIAssistantPanelProps> = ({
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                     placeholder="Ask for suggestions or describe what you want..."
-                    className="flex-1 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors"
+                    className="flex-1 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors"
                     disabled={isLoading}
                   />
                   <LiquidGlassButton

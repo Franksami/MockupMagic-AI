@@ -24,7 +24,12 @@
     "test:ci": "playwright test --reporter=github",
     "test:whop": "playwright test tests/whop-integration.spec.ts",
     "test:webhook": "tsx tests/whop-webhook-simulator.ts",
-    "validate:whop": "tsx scripts/validate-whop-integration.ts"
+    "validate:whop": "tsx scripts/validate-whop-integration.ts",
+    "test:visual": "playwright test tests/visual-regression.spec.ts",
+    "audit:colors": "tsx scripts/audit-colors.ts",
+    "migrate:colors": "tsx scripts/migrate-colors.ts",
+    "migrate:colors:dry": "tsx scripts/migrate-colors.ts --dry-run",
+    "feature-flags:init": "npx convex run featureFlags:initializeDefaults"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.10",
@@ -58,20 +63,22 @@
     "@playwright/experimental-ct-react": "^1.55.0",
     "@playwright/test": "^1.55.0",
     "@tailwindcss/postcss": "^4",
+    "@types/glob": "^8.1.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "chalk": "^5.3.0",
     "dotenv": "^17.2.2",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
+    "glob": "^11.0.3",
     "lighthouse": "^12.8.2",
     "msw": "^2.11.2",
+    "ora": "^8.0.0",
     "playwright-core": "^1.55.0",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "tsx": "^4.7.0",
-    "chalk": "^5.3.0",
-    "ora": "^8.0.0"
+    "tsx": "^4.20.5",
+    "typescript": "^5"
   }
 }

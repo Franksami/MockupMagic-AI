@@ -204,7 +204,7 @@ export function WhopStoreIntegration({
       <LiquidGlassContainer className="p-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-            <ShoppingBag className="w-5 h-5 text-purple-400" />
+            <ShoppingBag className="w-5 h-5 text-primary-400" />
             Select Products to Update
           </h3>
           <button
@@ -231,7 +231,7 @@ export function WhopStoreIntegration({
                 onClick={() => handleProductSelect(product.id)}
                 className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
                   selectedProducts.includes(product.id)
-                    ? 'border-purple-500 bg-purple-500/10'
+                    ? 'border-primary-500 bg-primary-500/10'
                     : 'border-gray-600 hover:border-gray-500'
                 }`}
                 whileHover={{ scale: 1.01 }}
@@ -240,8 +240,8 @@ export function WhopStoreIntegration({
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center">
-                        <ShoppingBag className="w-6 h-6 text-purple-400" />
+                      <div className="w-12 h-12 bg-gradient-to-br from-primary-500/20 to-pink-500/20 rounded-lg flex items-center justify-center">
+                        <ShoppingBag className="w-6 h-6 text-primary-400" />
                       </div>
                       <div>
                         <h4 className="font-medium text-white">{product.title}</h4>
@@ -282,7 +282,7 @@ export function WhopStoreIntegration({
                       </div>
                     )}
                     {!applicationResults[product.id] && selectedProducts.includes(product.id) && (
-                      <div className="w-5 h-5 border-2 border-purple-500 rounded"></div>
+                      <div className="w-5 h-5 border-2 border-primary-500 rounded"></div>
                     )}
                   </div>
                 </div>

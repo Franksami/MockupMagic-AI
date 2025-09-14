@@ -48,7 +48,7 @@ export function CreditDashboard({ userId, className = "" }: CreditDashboardProps
     const colors: Record<string, string> = {
       starter: "text-gray-400",
       growth: "text-blue-400",
-      pro: "text-purple-400"
+      pro: "text-primary-400"
     };
     return colors[tier] || "text-gray-400";
   };
@@ -76,7 +76,7 @@ export function CreditDashboard({ userId, className = "" }: CreditDashboardProps
                 {getTierDisplayName(user.subscriptionTier)} Plan
               </span>
               {user.subscriptionTier === "pro" && (
-                <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
+                <span className="px-2 py-1 bg-primary-500/20 text-primary-300 text-xs rounded-full">
                   Unlimited
                 </span>
               )}
@@ -161,13 +161,13 @@ export function CreditDashboard({ userId, className = "" }: CreditDashboardProps
           )}
 
           {user.subscriptionTier === "starter" && (
-            <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg transition-colors font-medium">
+            <button className="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 px-4 rounded-lg transition-colors font-medium">
               Upgrade to Growth Plan
             </button>
           )}
 
           {user.subscriptionTier === "growth" && (
-            <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white py-3 px-4 rounded-lg transition-colors font-medium">
+            <button className="w-full bg-gradient-to-r from-primary-600 to-pink-600 hover:from-primary-700 hover:to-pink-700 text-white py-3 px-4 rounded-lg transition-colors font-medium">
               Upgrade to Pro Plan
             </button>
           )}

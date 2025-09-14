@@ -55,12 +55,8 @@ const nextConfig: NextConfig = {
         poll: 1000,
         aggregateTimeout: 300,
       };
-      // Ensure React Fast Refresh works properly with providers
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        'react-dom$': 'react-dom/profiling',
-        'scheduler/tracing': 'scheduler/tracing-profiling',
-      };
+      // Remove problematic profiling aliases that cause React DOM errors
+      // The standard react-dom should work fine for development
     }
     return config;
   },

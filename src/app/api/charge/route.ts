@@ -86,14 +86,14 @@ export async function POST(request: NextRequest) {
     console.error("Charge creation error:", error);
 
     // Handle specific error types
-    if (error?.message?.includes('insufficient_funds')) {
+    if ((error as any)?.message?.includes('insufficient_funds')) {
       return NextResponse.json(
         { error: "Insufficient funds in your account" },
         { status: 402 }
       );
     }
 
-    if (error?.message?.includes('auth') || error?.message?.includes('token')) {
+    if ((error as any)?.message?.includes('auth') || (error as any)?.message?.includes('token')) {
       return NextResponse.json(
         { error: "Authentication failed - please log in again" },
         { status: 401 }
@@ -104,7 +104,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         error: "Failed to create payment charge",
-        details: process.env.NODE_ENV === 'development' ? error?.message : undefined
+        details: process.env.NODE_ENV === 'development' ? (error as any)?.message : undefined
       },
       { status: 500 }
     );

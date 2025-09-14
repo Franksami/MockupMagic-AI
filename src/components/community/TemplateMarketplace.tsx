@@ -74,7 +74,7 @@ export function TemplateMarketplace({ className = "" }: TemplateMarketplaceProps
     <div className={`space-y-6 ${className}`}>
       {/* Header */}
       <div className="text-center">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent mb-4">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-primary-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent mb-4">
           Whop Creator Template Marketplace
         </h1>
         <p className="text-gray-300 text-lg max-w-2xl mx-auto">
@@ -95,7 +95,7 @@ export function TemplateMarketplace({ className = "" }: TemplateMarketplaceProps
             <div className="text-sm text-gray-400">Avg Conversion Boost</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-purple-400">$15K+</div>
+            <div className="text-2xl font-bold text-primary-400">$15K+</div>
             <div className="text-sm text-gray-400">Creator Earnings/Month</div>
           </div>
           <div>
@@ -116,7 +116,7 @@ export function TemplateMarketplace({ className = "" }: TemplateMarketplaceProps
               placeholder="Search templates for your Whop store type..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
+              className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-primary-500 focus:outline-none"
             />
           </div>
 
@@ -126,7 +126,7 @@ export function TemplateMarketplace({ className = "" }: TemplateMarketplaceProps
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-purple-500 focus:outline-none"
+              className="px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-primary-500 focus:outline-none"
             >
               {whopStoreCategories.map(category => (
                 <option key={category} value={category}>
@@ -143,7 +143,7 @@ export function TemplateMarketplace({ className = "" }: TemplateMarketplaceProps
                   onClick={() => setFilterType(filter)}
                   className={`px-3 py-1 rounded text-sm transition-colors ${
                     filterType === filter
-                      ? 'bg-purple-600 text-white'
+                      ? 'bg-primary-600 text-white'
                       : 'text-gray-400 hover:text-white'
                   }`}
                 >
@@ -156,7 +156,7 @@ export function TemplateMarketplace({ className = "" }: TemplateMarketplaceProps
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortBy)}
-              className="px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-purple-500 focus:outline-none"
+              className="px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-primary-500 focus:outline-none"
             >
               <option value="popular">Most Popular</option>
               <option value="recent">Most Recent</option>
@@ -169,7 +169,7 @@ export function TemplateMarketplace({ className = "" }: TemplateMarketplaceProps
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-2 rounded transition-colors ${
-                  viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'
+                  viewMode === 'grid' ? 'bg-primary-600 text-white' : 'text-gray-400 hover:text-white'
                 }`}
               >
                 <Grid className="w-4 h-4" />
@@ -177,7 +177,7 @@ export function TemplateMarketplace({ className = "" }: TemplateMarketplaceProps
               <button
                 onClick={() => setViewMode('list')}
                 className={`p-2 rounded transition-colors ${
-                  viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'
+                  viewMode === 'list' ? 'bg-primary-600 text-white' : 'text-gray-400 hover:text-white'
                 }`}
               >
                 <List className="w-4 h-4" />
@@ -201,7 +201,7 @@ export function TemplateMarketplace({ className = "" }: TemplateMarketplaceProps
                 whileHover={{ scale: 1.05 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-pink-500 rounded-full mx-auto mb-2 flex items-center justify-center">
                   <span className="text-white font-semibold">
                     {creator.name?.charAt(0) || 'C'}
                   </span>
@@ -236,9 +236,9 @@ export function TemplateMarketplace({ className = "" }: TemplateMarketplaceProps
       {!communityTemplates && (
         <div className="space-y-6">
           <div className="text-center py-12">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-purple-500/10 border border-purple-500/20 rounded-full">
-              <div className="w-5 h-5 border-2 border-purple-400 border-t-transparent rounded-full animate-spin"></div>
-              <span className="text-purple-300 font-medium">Loading community templates...</span>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary-500/10 border border-primary-500/20 rounded-full">
+              <div className="w-5 h-5 border-2 border-primary-400 border-t-transparent rounded-full animate-spin"></div>
+              <span className="text-primary-300 font-medium">Loading community templates...</span>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -271,7 +271,7 @@ export function TemplateMarketplace({ className = "" }: TemplateMarketplaceProps
           <p className="text-gray-400 mb-6">
             Be the first to share a template for {selectedCategory !== 'all' ? selectedCategory : 'this category'}!
           </p>
-          <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors">
+          <button className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg transition-colors">
             Share Your Template
           </button>
         </LiquidGlassContainer>
@@ -308,8 +308,8 @@ function TemplateCard({ template, viewMode, onAction, userCanDownload }: Templat
       <LiquidGlassCard className="p-4">
         <div className="flex gap-4">
           {/* Template Preview */}
-          <div className="w-32 h-20 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center">
-            <Zap className="w-8 h-8 text-purple-400" />
+          <div className="w-32 h-20 bg-gradient-to-br from-primary-500/20 to-pink-500/20 rounded-lg flex items-center justify-center">
+            <Zap className="w-8 h-8 text-primary-400" />
           </div>
 
           {/* Template Info */}
@@ -362,7 +362,7 @@ function TemplateCard({ template, viewMode, onAction, userCanDownload }: Templat
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={handleDownload}
-                className="p-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
+                className="p-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors"
               >
                 <Download className="w-4 h-4" />
               </motion.button>
@@ -394,9 +394,9 @@ function TemplateCard({ template, viewMode, onAction, userCanDownload }: Templat
       <LiquidGlassCard className="p-4 h-full">
         <div className="space-y-4">
           {/* Template Preview */}
-          <div className="relative aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg overflow-hidden">
+          <div className="relative aspect-video bg-gradient-to-br from-primary-500/20 to-pink-500/20 rounded-lg overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center">
-              <Zap className="w-12 h-12 text-purple-400" />
+              <Zap className="w-12 h-12 text-primary-400" />
             </div>
 
             {/* Badges */}
@@ -407,7 +407,7 @@ function TemplateCard({ template, viewMode, onAction, userCanDownload }: Templat
                 </span>
               )}
               {template.shareType === 'premium' && (
-                <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
+                <span className="px-2 py-1 bg-primary-500/20 text-primary-300 text-xs rounded-full">
                   Premium
                 </span>
               )}
@@ -428,7 +428,7 @@ function TemplateCard({ template, viewMode, onAction, userCanDownload }: Templat
 
             {/* Creator Info */}
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-6 h-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+              <div className="w-6 h-6 bg-gradient-to-br from-primary-500 to-pink-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">
                   {template.creator?.name?.charAt(0) || 'C'}
                 </span>
@@ -484,7 +484,7 @@ function TemplateCard({ template, viewMode, onAction, userCanDownload }: Templat
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleDownload}
-                className="flex-1 py-2 px-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm transition-colors"
+                className="flex-1 py-2 px-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm transition-colors"
               >
                 <Download className="w-4 h-4 mx-auto" />
               </motion.button>

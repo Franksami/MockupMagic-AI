@@ -368,7 +368,7 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({
                 animate={{ opacity: 1 }}
               >
                 <div
-                  className="absolute bg-transparent border-4 border-purple-500/50 rounded-lg"
+                  className="absolute bg-transparent border-4 border-primary-500/50 rounded-lg"
                   style={{
                     // This would be calculated based on the target element
                     top: '20%',
@@ -404,7 +404,7 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({
                   </div>
                   <div className="w-full h-1 bg-gray-700 rounded-full overflow-hidden">
                     <motion.div
-                      className="h-full bg-gradient-to-r from-purple-500 to-pink-500"
+                      className="h-full bg-gradient-to-r from-primary-500 to-pink-500"
                       initial={{ width: 0 }}
                       animate={{ width: `${progress}%` }}
                       transition={{ duration: 0.3 }}
@@ -414,8 +414,8 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({
 
                 {/* Step Content */}
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="p-3 bg-purple-500/20 rounded-lg">
-                    <currentTourStep.icon className="w-6 h-6 text-purple-400" />
+                  <div className="p-3 bg-primary-500/20 rounded-lg">
+                    <currentTourStep.icon className="w-6 h-6 text-primary-400" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-white mb-2">
@@ -437,7 +437,7 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({
                     <ul className="space-y-1">
                       {currentTourStep.tips.map((tip, index) => (
                         <li key={index} className="text-xs text-gray-400 flex items-start gap-2">
-                          <span className="text-purple-400 mt-0.5">•</span>
+                          <span className="text-primary-400 mt-0.5">•</span>
                           <span>{tip}</span>
                         </li>
                       ))}
@@ -449,8 +449,8 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({
                 {currentTourStep.shortcuts && currentTourStep.shortcuts.length > 0 && (
                   <div className="mb-4 p-3 bg-gray-800/50 rounded-lg">
                     <div className="flex items-center gap-2 mb-2">
-                      <Keyboard className="w-4 h-4 text-purple-400" />
-                      <span className="text-xs font-medium text-purple-400">Shortcuts</span>
+                      <Keyboard className="w-4 h-4 text-primary-400" />
+                      <span className="text-xs font-medium text-primary-400">Shortcuts</span>
                     </div>
                     <div className="space-y-1">
                       {currentTourStep.shortcuts.map((shortcut, index) => (
@@ -514,7 +514,7 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setShowHelp(true)}
-        className="fixed bottom-6 right-6 z-40 p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg text-white"
+        className="fixed bottom-6 right-6 z-40 p-3 bg-gradient-to-r from-primary-500 to-pink-500 rounded-full shadow-lg text-white"
       >
         <HelpCircle className="w-6 h-6" />
       </motion.button>
@@ -541,7 +541,7 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({
                 <div className="p-6 border-b border-gray-700">
                   <div className="flex items-center justify-between">
                     <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                      <HelpCircle className="w-8 h-8 text-purple-400" />
+                      <HelpCircle className="w-8 h-8 text-primary-400" />
                       Help Center
                     </h2>
                     <button
@@ -559,7 +559,7 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       placeholder="Search for help..."
-                      className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors"
+                      className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors"
                     />
                   </div>
                 </div>
@@ -570,29 +570,29 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <LiquidGlassCard
                       variant="shallow"
-                      className="p-4 cursor-pointer hover:bg-purple-500/10 transition-all"
+                      className="p-4 cursor-pointer hover:bg-primary-500/10 transition-all"
                       onClick={handleRestartTour}
                     >
-                      <PlayCircle className="w-8 h-8 text-purple-400 mb-2" />
+                      <PlayCircle className="w-8 h-8 text-primary-400 mb-2" />
                       <h4 className="text-white font-medium">Restart Tour</h4>
                       <p className="text-xs text-gray-400 mt-1">Take the guided tour again</p>
                     </LiquidGlassCard>
 
                     <LiquidGlassCard
                       variant="shallow"
-                      className="p-4 cursor-pointer hover:bg-purple-500/10 transition-all"
+                      className="p-4 cursor-pointer hover:bg-primary-500/10 transition-all"
                       onClick={() => setShowShortcuts(true)}
                     >
-                      <Keyboard className="w-8 h-8 text-purple-400 mb-2" />
+                      <Keyboard className="w-8 h-8 text-primary-400 mb-2" />
                       <h4 className="text-white font-medium">Shortcuts</h4>
                       <p className="text-xs text-gray-400 mt-1">Keyboard shortcuts reference</p>
                     </LiquidGlassCard>
 
                     <LiquidGlassCard
                       variant="shallow"
-                      className="p-4 cursor-pointer hover:bg-purple-500/10 transition-all"
+                      className="p-4 cursor-pointer hover:bg-primary-500/10 transition-all"
                     >
-                      <MessageCircle className="w-8 h-8 text-purple-400 mb-2" />
+                      <MessageCircle className="w-8 h-8 text-primary-400 mb-2" />
                       <h4 className="text-white font-medium">Contact Support</h4>
                       <p className="text-xs text-gray-400 mt-1">Get help from our team</p>
                     </LiquidGlassCard>
@@ -605,12 +605,12 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({
                       <LiquidGlassCard
                         key={topic.id}
                         variant="shallow"
-                        className="p-4 cursor-pointer hover:bg-purple-500/10 transition-all"
+                        className="p-4 cursor-pointer hover:bg-primary-500/10 transition-all"
                         onClick={() => setSelectedTopic(topic)}
                       >
                         <div className="flex items-start gap-3">
-                          <div className="p-2 bg-purple-500/20 rounded-lg">
-                            <topic.icon className="w-5 h-5 text-purple-400" />
+                          <div className="p-2 bg-primary-500/20 rounded-lg">
+                            <topic.icon className="w-5 h-5 text-primary-400" />
                           </div>
                           <div className="flex-1">
                             <h4 className="text-white font-medium mb-1">{topic.title}</h4>
@@ -662,7 +662,7 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({
               <LiquidGlassContainer variant="deep" glow className="p-6">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                    <Keyboard className="w-6 h-6 text-purple-400" />
+                    <Keyboard className="w-6 h-6 text-primary-400" />
                     Keyboard Shortcuts
                   </h3>
                   <button
@@ -676,7 +676,7 @@ export const OnboardingTour: React.FC<OnboardingTourProps> = ({
                 <div className="space-y-6 max-h-[60vh] overflow-y-auto">
                   {shortcuts.map((category) => (
                     <div key={category.category}>
-                      <h4 className="text-sm font-medium text-purple-400 mb-3">{category.category}</h4>
+                      <h4 className="text-sm font-medium text-primary-400 mb-3">{category.category}</h4>
                       <div className="space-y-2">
                         {category.items.map((shortcut) => (
                           <div key={shortcut.key} className="flex items-center justify-between">

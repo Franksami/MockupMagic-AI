@@ -229,7 +229,7 @@ export function CertificationDashboard({ className = "" }: CertificationDashboar
                     <button className="text-blue-400 hover:text-blue-300 transition-colors">
                       <Download className="w-4 h-4" />
                     </button>
-                    <button className="text-purple-400 hover:text-purple-300 transition-colors">
+                    <button className="text-primary-400 hover:text-primary-300 transition-colors">
                       <Share2 className="w-4 h-4" />
                     </button>
                   </div>
@@ -260,7 +260,7 @@ export function CertificationDashboard({ className = "" }: CertificationDashboar
                     <div className={`w-16 h-16 mx-auto mb-3 rounded-full flex items-center justify-center ${
                       program.badgeDesign === 'gradient-gold'
                         ? 'bg-gradient-to-br from-yellow-400 to-orange-500'
-                        : 'bg-gradient-to-br from-blue-400 to-purple-500'
+                        : 'bg-gradient-to-br from-blue-400 to-primary-500'
                     }`}>
                       <Award className="w-8 h-8 text-white" />
                     </div>
@@ -312,7 +312,7 @@ export function CertificationDashboard({ className = "" }: CertificationDashboar
                       </div>
                       <div className="w-full bg-gray-700 rounded-full h-2">
                         <div
-                          className="bg-purple-500 h-2 rounded-full transition-all"
+                          className="bg-primary-500 h-2 rounded-full transition-all"
                           style={{ width: `${(requirements.met / requirements.total) * 100}%` }}
                         />
                       </div>
@@ -325,7 +325,7 @@ export function CertificationDashboard({ className = "" }: CertificationDashboar
                     <ul className="space-y-1">
                       {program.benefits.slice(0, 3).map((benefit, index) => (
                         <li key={index} className="text-sm text-gray-400 flex items-center gap-2">
-                          <Zap className="w-3 h-3 text-purple-400" />
+                          <Zap className="w-3 h-3 text-primary-400" />
                           {benefit}
                         </li>
                       ))}
@@ -461,7 +461,7 @@ export function CertificationDashboard({ className = "" }: CertificationDashboar
 
           <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-primary-500 rounded-full flex items-center justify-center">
                 <Award className="w-5 h-5 text-white" />
               </div>
               <div>

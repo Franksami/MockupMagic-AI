@@ -5,6 +5,9 @@ import { ConvexClientProvider } from "@/lib/convex";
 import { ReactQueryProvider } from "@/lib/react-query";
 import { WhopProvider } from "@/components/providers/whop-provider";
 import { FrostedUIProvider } from "@/components/providers/frosted-provider";
+import { FeatureFlagProvider } from "@/lib/featureFlags";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { AppShell } from "@/components/shell/AppShell";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,9 +37,15 @@ export default function RootLayout({
         <WhopProvider>
           <ConvexClientProvider>
             <ReactQueryProvider>
-              <FrostedUIProvider>
-                {children}
-              </FrostedUIProvider>
+              <FeatureFlagProvider>
+                <ThemeProvider>
+                  <FrostedUIProvider>
+                    <AppShell>
+                      {children}
+                    </AppShell>
+                  </FrostedUIProvider>
+                </ThemeProvider>
+              </FeatureFlagProvider>
             </ReactQueryProvider>
           </ConvexClientProvider>
         </WhopProvider>

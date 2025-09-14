@@ -289,7 +289,7 @@ const tierColors = {
   bronze: 'from-orange-600 to-orange-400',
   silver: 'from-gray-400 to-gray-300',
   gold: 'from-yellow-500 to-yellow-400',
-  platinum: 'from-purple-400 to-purple-300',
+  platinum: 'from-primary-400 to-primary-300',
   diamond: 'from-cyan-400 to-cyan-300',
 };
 
@@ -390,7 +390,7 @@ export const AchievementSystem: React.FC<AchievementSystemProps> = ({
             <p className="text-gray-400">Level {userStats.level} Creator</p>
           </div>
           <div className="text-right">
-            <div className="text-3xl font-bold text-purple-400">{totalPoints}</div>
+            <div className="text-3xl font-bold text-primary-400">{totalPoints}</div>
             <p className="text-sm text-gray-400">Total Points</p>
           </div>
         </div>
@@ -404,7 +404,7 @@ export const AchievementSystem: React.FC<AchievementSystemProps> = ({
           </div>
           <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-gradient-to-r from-purple-500 to-pink-500"
+              className="h-full bg-gradient-to-r from-primary-500 to-pink-500"
               initial={{ width: 0 }}
               animate={{ width: `${levelProgress}%` }}
               transition={{ duration: 1, ease: 'easeOut' }}
@@ -482,14 +482,14 @@ export const AchievementSystem: React.FC<AchievementSystemProps> = ({
                       ${milestone.currentValue} / ${milestone.value}
                     </div>
                     {milestone.reward && (
-                      <p className="text-xs text-purple-400">{milestone.reward}</p>
+                      <p className="text-xs text-primary-400">{milestone.reward}</p>
                     )}
                   </div>
                 </div>
                 {!milestone.achieved && (
                   <div className="mt-2 h-2 bg-gray-800 rounded-full overflow-hidden">
                     <motion.div
-                      className="h-full bg-gradient-to-r from-purple-500 to-pink-500"
+                      className="h-full bg-gradient-to-r from-primary-500 to-pink-500"
                       initial={{ width: 0 }}
                       animate={{ width: `${(milestone.currentValue / milestone.value) * 100}%` }}
                       transition={{ duration: 1 }}
@@ -512,7 +512,7 @@ export const AchievementSystem: React.FC<AchievementSystemProps> = ({
               className={cn(
                 'px-3 py-1 rounded-lg text-sm transition-colors',
                 showUnlockedOnly
-                  ? 'bg-purple-500 text-white'
+                  ? 'bg-primary-500 text-white'
                   : 'bg-gray-800 text-gray-400 hover:text-white'
               )}
             >
@@ -528,7 +528,7 @@ export const AchievementSystem: React.FC<AchievementSystemProps> = ({
             className={cn(
               'px-4 py-2 rounded-lg whitespace-nowrap transition-all',
               !selectedCategory
-                ? 'bg-purple-500 text-white'
+                ? 'bg-primary-500 text-white'
                 : 'bg-gray-800 text-gray-400 hover:text-white'
             )}
           >
@@ -543,7 +543,7 @@ export const AchievementSystem: React.FC<AchievementSystemProps> = ({
                 className={cn(
                   'px-4 py-2 rounded-lg flex items-center gap-2 whitespace-nowrap transition-all',
                   selectedCategory === category
-                    ? 'bg-purple-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : 'bg-gray-800 text-gray-400 hover:text-white'
                 )}
               >
@@ -628,7 +628,7 @@ export const AchievementSystem: React.FC<AchievementSystemProps> = ({
                   {achievement.reward && (
                     <div className="mt-3 pt-3 border-t border-gray-700">
                       <div className="flex items-center justify-between">
-                        <span className="text-xs text-purple-400">
+                        <span className="text-xs text-primary-400">
                           <Gift className="w-3 h-3 inline mr-1" />
                           {achievement.reward}
                         </span>

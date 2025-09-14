@@ -125,7 +125,7 @@ export function AuthTest() {
           <div className="flex justify-between">
             <span className="text-gray-300">Tier:</span>
             <span className={`font-medium ${
-              tier === "pro" ? "text-purple-300" :
+              tier === "pro" ? "text-primary-300" :
               tier === "growth" ? "text-blue-300" :
               "text-green-300"
             }`}>
@@ -147,7 +147,7 @@ export function AuthTest() {
 
       {/* Permissions */}
       <FrostedCard className="p-6">
-        <h3 className="text-purple-300 font-semibold mb-4">🔐 Permissions</h3>
+        <h3 className="text-primary-300 font-semibold mb-4">🔐 Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
           <div className="flex items-center space-x-2">
             <div className={`w-2 h-2 rounded-full ${permissions.canGenerateBasicMockups ? "bg-green-400" : "bg-red-400"}`} />

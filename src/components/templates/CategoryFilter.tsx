@@ -46,7 +46,7 @@ export function CategoryFilter({
     apparel: {
       label: "Clothing & Apparel",
       icon: "👕",
-      color: "text-purple-300 hover:text-purple-200"
+      color: "text-primary-300 hover:text-primary-200"
     },
     books: {
       label: "Books & Publications", 

@@ -22,8 +22,8 @@ export default defineConfig({
   ],
 
   use: {
-    // Base URL for testing (use bypass port for stable testing)
-    baseURL: process.env.BASE_URL || 'http://localhost:54901',
+    // Base URL for testing
+    baseURL: process.env.BASE_URL || 'http://localhost:3000',
 
     // Screenshot and video settings for visual validation
     screenshot: 'only-on-failure',
@@ -127,7 +127,7 @@ export default defineConfig({
   webServer: {
     command: 'npm run dev',
     url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: true, // Always reuse existing server
     timeout: 120000,
   },
 });

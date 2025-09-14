@@ -357,7 +357,7 @@ export const DragDropZone: React.FC<DragDropZoneProps> = ({
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 animate-pulse" />
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-primary-500/10 to-pink-500/10 animate-pulse" />
               </motion.div>
             )}
           </AnimatePresence>

@@ -84,12 +84,12 @@ export const LivePreviewCanvas: React.FC<LivePreviewCanvasProps> = ({
                 ease: 'linear',
               }}
             >
-              <Sparkles className="w-full h-full text-purple-400" />
+              <Sparkles className="w-full h-full text-primary-400" />
             </motion.div>
             <p className="text-white text-lg font-medium mb-2">Generating Mockup...</p>
             <div className="w-64 h-2 bg-gray-700 rounded-full overflow-hidden">
               <motion.div
-                className="h-full bg-gradient-to-r from-purple-500 to-pink-500"
+                className="h-full bg-gradient-to-r from-primary-500 to-pink-500"
                 initial={{ width: '0%' }}
                 animate={{ width: `${progress}%` }}
                 transition={{ duration: 0.3 }}
@@ -147,7 +147,7 @@ export const LivePreviewCanvas: React.FC<LivePreviewCanvasProps> = ({
                         transition: 'transform 0.3s',
                       }}
                     />
-                    <div className="absolute top-2 left-2 px-2 py-1 bg-purple-500/50 backdrop-blur-sm rounded text-white text-xs">
+                    <div className="absolute top-2 left-2 px-2 py-1 bg-primary-500/50 backdrop-blur-sm rounded text-white text-xs">
                       Generated
                     </div>
                   </>
@@ -231,7 +231,7 @@ export const LivePreviewCanvas: React.FC<LivePreviewCanvasProps> = ({
                 className={cn(
                   'p-2 rounded transition-colors',
                   viewMode === 'single'
-                    ? 'bg-purple-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : 'text-gray-400 hover:text-white'
                 )}
                 title="Single View"
@@ -243,7 +243,7 @@ export const LivePreviewCanvas: React.FC<LivePreviewCanvasProps> = ({
                 className={cn(
                   'p-2 rounded transition-colors',
                   viewMode === 'split'
-                    ? 'bg-purple-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : 'text-gray-400 hover:text-white'
                 )}
                 title="Split View"
@@ -255,7 +255,7 @@ export const LivePreviewCanvas: React.FC<LivePreviewCanvasProps> = ({
                 className={cn(
                   'p-2 rounded transition-colors',
                   viewMode === 'overlay'
-                    ? 'bg-purple-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : 'text-gray-400 hover:text-white'
                 )}
                 title="Overlay View"

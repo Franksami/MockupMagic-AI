@@ -1,0 +1,2757 @@
+{
+  "timestamp": "2025-09-14T04:43:57.146Z",
+  "totalFiles": 31,
+  "totalInstances": 392,
+  "byType": {
+    "hex": 5,
+    "tailwind": 155,
+    "cssVar": 22,
+    "named": 210
+  },
+  "details": [
+    {
+      "file": "src/styles/glassmorphism.css",
+      "line": 184,
+      "column": 0,
+      "context": "border-color: var(--color-primary-500);",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 10,
+      "column": 0,
+      "context": "--color-primary-50: oklch(95% 0.04 30deg);",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 12,
+      "column": 0,
+      "context": "--color-primary-200: oklch(87% 0.11 30deg);",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 14,
+      "column": 0,
+      "context": "--color-primary-400: oklch(72% 0.18 30deg);",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 16,
+      "column": 0,
+      "context": "--color-primary-600: oklch(55% 0.19 30deg);",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 18,
+      "column": 0,
+      "context": "--color-primary-800: oklch(42% 0.15 30deg);",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 20,
+      "column": 0,
+      "context": "--color-primary-950: oklch(28% 0.10 30deg);",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 63,
+      "column": 0,
+      "context": "--color-focus-ring: var(--color-primary-500);",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 71,
+      "column": 0,
+      "context": "--color-primary-50: #fff4ed;",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 73,
+      "column": 0,
+      "context": "--color-primary-200: #ffcdab;",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 75,
+      "column": 0,
+      "context": "--color-primary-400: #ff7c3f;",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 77,
+      "column": 0,
+      "context": "--color-primary-600: #ea2e0f;",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 79,
+      "column": 0,
+      "context": "--color-primary-800: #9a1a13;",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 81,
+      "column": 0,
+      "context": "--color-primary-950: #430a08;",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 115,
+      "column": 0,
+      "context": ".theme-purple {",
+      "type": "named"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 117,
+      "column": 0,
+      "context": "--color-primary-50: #faf5ff;",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 119,
+      "column": 0,
+      "context": "--color-primary-200: #e9d5ff;",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 121,
+      "column": 0,
+      "context": "--color-primary-400: #c084fc;",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 122,
+      "column": 24,
+      "context": "--color-primary-500: #8b5cf6; /* Original purple */",
+      "type": "hex"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 122,
+      "column": 0,
+      "context": "--color-primary-500: #8b5cf6; /* Original purple */",
+      "type": "named"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 123,
+      "column": 0,
+      "context": "--color-primary-600: #9333ea;",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 125,
+      "column": 0,
+      "context": "--color-primary-800: #6b21a8;",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 127,
+      "column": 0,
+      "context": "--color-primary-950: #3b0764;",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 153,
+      "column": 0,
+      "context": ".bg-primary { background-color: var(--color-primary-500); }",
+      "type": "css-var"
+    },
+    {
+      "file": "src/styles/colors-oklch.css",
+      "line": 155,
+      "column": 0,
+      "context": ".border-primary { border-color: var(--color-primary-500); }",
+      "type": "css-var"
+    },
+    {
+      "file": "src/components/auth-test.tsx",
+      "line": 128,
+      "column": 33,
+      "context": "tier === \"pro\" ? \"text-purple-300\" :",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/auth-test.tsx",
+      "line": 128,
+      "column": 0,
+      "context": "tier === \"pro\" ? \"text-purple-300\" :",
+      "type": "named"
+    },
+    {
+      "file": "src/components/auth-test.tsx",
+      "line": 150,
+      "column": 24,
+      "context": "<h3 className=\"text-purple-300 font-semibold mb-4\">🔐 Permissions</h3>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/auth-test.tsx",
+      "line": 150,
+      "column": 0,
+      "context": "<h3 className=\"text-purple-300 font-semibold mb-4\">🔐 Permissions</h3>",
+      "type": "named"
+    },
+    {
+      "file": "src/components/whop/WhopStoreIntegration.tsx",
+      "line": 207,
+      "column": 45,
+      "context": "<ShoppingBag className=\"w-5 h-5 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/whop/WhopStoreIntegration.tsx",
+      "line": 207,
+      "column": 0,
+      "context": "<ShoppingBag className=\"w-5 h-5 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/whop/WhopStoreIntegration.tsx",
+      "line": 234,
+      "column": 24,
+      "context": "? 'border-purple-500 bg-purple-500/10'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/whop/WhopStoreIntegration.tsx",
+      "line": 234,
+      "column": 0,
+      "context": "? 'border-purple-500 bg-purple-500/10'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/whop/WhopStoreIntegration.tsx",
+      "line": 243,
+      "column": 0,
+      "context": "<div className=\"w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/whop/WhopStoreIntegration.tsx",
+      "line": 244,
+      "column": 57,
+      "context": "<ShoppingBag className=\"w-6 h-6 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/whop/WhopStoreIntegration.tsx",
+      "line": 285,
+      "column": 56,
+      "context": "<div className=\"w-5 h-5 border-2 border-purple-500 rounded\"></div>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/whop/WhopStoreIntegration.tsx",
+      "line": 285,
+      "column": 0,
+      "context": "<div className=\"w-5 h-5 border-2 border-purple-500 rounded\"></div>",
+      "type": "named"
+    },
+    {
+      "file": "src/components/upload/DragDropZone.tsx",
+      "line": 360,
+      "column": 0,
+      "context": "<div className=\"absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 animate-pulse\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ui/LoadingSpinner.tsx",
+      "line": 38,
+      "column": 54,
+      "context": "<Sparkles className={`${sizeClasses[size]} text-purple-400`} />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/ui/LoadingSpinner.tsx",
+      "line": 38,
+      "column": 0,
+      "context": "<Sparkles className={`${sizeClasses[size]} text-purple-400`} />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ui/LoadingSpinner.tsx",
+      "line": 55,
+      "column": 0,
+      "context": "className={`${sizeClasses[size]} bg-gradient-to-r from-purple-500 to-pink-500 rounded-full`}",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ui/LoadingSpinner.tsx",
+      "line": 72,
+      "column": 51,
+      "context": "<Loader2 className={`${sizeClasses[size]} text-purple-400`} />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/ui/LoadingSpinner.tsx",
+      "line": 72,
+      "column": 0,
+      "context": "<Loader2 className={`${sizeClasses[size]} text-purple-400`} />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ui/ErrorBoundary.tsx",
+      "line": 171,
+      "column": 0,
+      "context": "className=\"w-full py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/theme/ThemeProvider.tsx",
+      "line": 13,
+      "column": 0,
+      "context": "export type ThemeMode = 'orange' | 'purple';",
+      "type": "named"
+    },
+    {
+      "file": "src/components/theme/ThemeProvider.tsx",
+      "line": 36,
+      "column": 0,
+      "context": "const [theme, setTheme] = useState<ThemeMode>('purple');",
+      "type": "named"
+    },
+    {
+      "file": "src/components/theme/ThemeProvider.tsx",
+      "line": 67,
+      "column": 0,
+      "context": "root.classList.remove('theme-orange', 'theme-purple');",
+      "type": "named"
+    },
+    {
+      "file": "src/components/theme/ThemeProvider.tsx",
+      "line": 122,
+      "column": 0,
+      "context": "const newTheme = theme === 'orange' ? 'purple' : 'orange';",
+      "type": "named"
+    },
+    {
+      "file": "src/components/theme/ThemeProvider.tsx",
+      "line": 196,
+      "column": 30,
+      "context": ": 'translate-x-1 bg-purple-500'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/theme/ThemeProvider.tsx",
+      "line": 196,
+      "column": 0,
+      "context": ": 'translate-x-1 bg-purple-500'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/theme/ThemeProvider.tsx",
+      "line": 232,
+      "column": 0,
+      "context": "purple,",
+      "type": "named"
+    },
+    {
+      "file": "src/components/theme/ThemeProvider.tsx",
+      "line": 235,
+      "column": 0,
+      "context": "purple: React.ReactNode;",
+      "type": "named"
+    },
+    {
+      "file": "src/components/theme/ThemeProvider.tsx",
+      "line": 238,
+      "column": 0,
+      "context": "return <>{theme === 'orange' ? orange : purple}</>;",
+      "type": "named"
+    },
+    {
+      "file": "src/components/templates/TemplateCard.tsx",
+      "line": 57,
+      "column": 15,
+      "context": "apparel: \"bg-purple-500/20 text-purple-300 border-purple-500/30\",",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/templates/TemplateCard.tsx",
+      "line": 57,
+      "column": 0,
+      "context": "apparel: \"bg-purple-500/20 text-purple-300 border-purple-500/30\",",
+      "type": "named"
+    },
+    {
+      "file": "src/components/templates/CategoryFilter.tsx",
+      "line": 49,
+      "column": 15,
+      "context": "color: \"text-purple-300 hover:text-purple-200\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/templates/CategoryFilter.tsx",
+      "line": 49,
+      "column": 0,
+      "context": "color: \"text-purple-300 hover:text-purple-200\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/providers/whop-provider.tsx",
+      "line": 77,
+      "column": 0,
+      "context": "<div className=\"min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 371,
+      "column": 63,
+      "context": "className=\"absolute bg-transparent border-4 border-purple-500/50 rounded-lg\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 371,
+      "column": 0,
+      "context": "className=\"absolute bg-transparent border-4 border-purple-500/50 rounded-lg\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 407,
+      "column": 0,
+      "context": "className=\"h-full bg-gradient-to-r from-purple-500 to-pink-500\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 417,
+      "column": 39,
+      "context": "<div className=\"p-3 bg-purple-500/20 rounded-lg\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 417,
+      "column": 0,
+      "context": "<div className=\"p-3 bg-purple-500/20 rounded-lg\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 418,
+      "column": 62,
+      "context": "<currentTourStep.icon className=\"w-6 h-6 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 418,
+      "column": 0,
+      "context": "<currentTourStep.icon className=\"w-6 h-6 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 440,
+      "column": 44,
+      "context": "<span className=\"text-purple-400 mt-0.5\">•</span>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 440,
+      "column": 0,
+      "context": "<span className=\"text-purple-400 mt-0.5\">•</span>",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 452,
+      "column": 52,
+      "context": "<Keyboard className=\"w-4 h-4 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 452,
+      "column": 0,
+      "context": "<Keyboard className=\"w-4 h-4 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 453,
+      "column": 60,
+      "context": "<span className=\"text-xs font-medium text-purple-400\">Shortcuts</span>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 453,
+      "column": 0,
+      "context": "<span className=\"text-xs font-medium text-purple-400\">Shortcuts</span>",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 517,
+      "column": 0,
+      "context": "className=\"fixed bottom-6 right-6 z-40 p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg text-white\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 544,
+      "column": 54,
+      "context": "<HelpCircle className=\"w-8 h-8 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 544,
+      "column": 0,
+      "context": "<HelpCircle className=\"w-8 h-8 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 562,
+      "column": 157,
+      "context": "className=\"w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 562,
+      "column": 0,
+      "context": "className=\"w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 573,
+      "column": 59,
+      "context": "className=\"p-4 cursor-pointer hover:bg-purple-500/10 transition-all\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 573,
+      "column": 0,
+      "context": "className=\"p-4 cursor-pointer hover:bg-purple-500/10 transition-all\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 576,
+      "column": 54,
+      "context": "<PlayCircle className=\"w-8 h-8 text-purple-400 mb-2\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 576,
+      "column": 0,
+      "context": "<PlayCircle className=\"w-8 h-8 text-purple-400 mb-2\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 583,
+      "column": 59,
+      "context": "className=\"p-4 cursor-pointer hover:bg-purple-500/10 transition-all\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 583,
+      "column": 0,
+      "context": "className=\"p-4 cursor-pointer hover:bg-purple-500/10 transition-all\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 586,
+      "column": 52,
+      "context": "<Keyboard className=\"w-8 h-8 text-purple-400 mb-2\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 586,
+      "column": 0,
+      "context": "<Keyboard className=\"w-8 h-8 text-purple-400 mb-2\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 593,
+      "column": 59,
+      "context": "className=\"p-4 cursor-pointer hover:bg-purple-500/10 transition-all\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 593,
+      "column": 0,
+      "context": "className=\"p-4 cursor-pointer hover:bg-purple-500/10 transition-all\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 595,
+      "column": 57,
+      "context": "<MessageCircle className=\"w-8 h-8 text-purple-400 mb-2\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 595,
+      "column": 0,
+      "context": "<MessageCircle className=\"w-8 h-8 text-purple-400 mb-2\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 608,
+      "column": 61,
+      "context": "className=\"p-4 cursor-pointer hover:bg-purple-500/10 transition-all\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 608,
+      "column": 0,
+      "context": "className=\"p-4 cursor-pointer hover:bg-purple-500/10 transition-all\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 612,
+      "column": 47,
+      "context": "<div className=\"p-2 bg-purple-500/20 rounded-lg\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 612,
+      "column": 0,
+      "context": "<div className=\"p-2 bg-purple-500/20 rounded-lg\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 613,
+      "column": 60,
+      "context": "<topic.icon className=\"w-5 h-5 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 613,
+      "column": 0,
+      "context": "<topic.icon className=\"w-5 h-5 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 665,
+      "column": 50,
+      "context": "<Keyboard className=\"w-6 h-6 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 665,
+      "column": 0,
+      "context": "<Keyboard className=\"w-6 h-6 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 679,
+      "column": 58,
+      "context": "<h4 className=\"text-sm font-medium text-purple-400 mb-3\">{category.category}</h4>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/onboarding/OnboardingTour.tsx",
+      "line": 679,
+      "column": 0,
+      "context": "<h4 className=\"text-sm font-medium text-purple-400 mb-3\">{category.category}</h4>",
+      "type": "named"
+    },
+    {
+      "file": "src/components/shell/ToolPanel.tsx",
+      "line": 114,
+      "column": 0,
+      "context": "<option>Purple (Legacy)</option>",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 170,
+      "column": 37,
+      "context": "isSelected && 'ring-2 ring-purple-500'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 170,
+      "column": 0,
+      "context": "isSelected && 'ring-2 ring-purple-500'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 183,
+      "column": 36,
+      "context": "className=\"w-4 h-4 text-purple-500 rounded\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 183,
+      "column": 0,
+      "context": "className=\"w-4 h-4 text-purple-500 rounded\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 191,
+      "column": 62,
+      "context": "<Loader2 className=\"w-6 h-6 animate-spin text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 191,
+      "column": 0,
+      "context": "<Loader2 className=\"w-6 h-6 animate-spin text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 236,
+      "column": 62,
+      "context": "<Loader2 className=\"w-5 h-5 animate-spin text-purple-400 mb-1\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 236,
+      "column": 0,
+      "context": "<Loader2 className=\"w-5 h-5 animate-spin text-purple-400 mb-1\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 299,
+      "column": 35,
+      "context": "isSelected && 'ring-2 ring-purple-500'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 299,
+      "column": 0,
+      "context": "isSelected && 'ring-2 ring-purple-500'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 311,
+      "column": 50,
+      "context": "<Sparkles className=\"w-12 h-12 text-purple-400 mb-3\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 311,
+      "column": 0,
+      "context": "<Sparkles className=\"w-12 h-12 text-purple-400 mb-3\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 316,
+      "column": 0,
+      "context": "className=\"h-full bg-gradient-to-r from-purple-500 to-pink-500\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 343,
+      "column": 42,
+      "context": "className=\"w-4 h-4 text-purple-500 rounded\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 343,
+      "column": 0,
+      "context": "className=\"w-4 h-4 text-purple-500 rounded\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 408,
+      "column": 63,
+      "context": "<h3 className=\"font-medium text-white group-hover:text-purple-400 transition-colors line-clamp-1\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 408,
+      "column": 0,
+      "context": "<h3 className=\"font-medium text-white group-hover:text-purple-400 transition-colors line-clamp-1\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 461,
+      "column": 24,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 461,
+      "column": 0,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 472,
+      "column": 24,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gallery/VirtualizedGallery.tsx",
+      "line": 472,
+      "column": 0,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 273,
+      "column": 40,
+      "context": "<Target className=\"w-5 h-5 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 273,
+      "column": 0,
+      "context": "<Target className=\"w-5 h-5 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 276,
+      "column": 38,
+      "context": "<button className=\"text-sm text-purple-400 hover:text-purple-300 transition-colors\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 276,
+      "column": 0,
+      "context": "<button className=\"text-sm text-purple-400 hover:text-purple-300 transition-colors\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 299,
+      "column": 64,
+      "context": "milestone.completed ? 'bg-green-500/20' : 'bg-purple-500/20'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 299,
+      "column": 0,
+      "context": "milestone.completed ? 'bg-green-500/20' : 'bg-purple-500/20'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 303,
+      "column": 65,
+      "context": "milestone.completed ? 'text-green-400' : 'text-purple-400'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 303,
+      "column": 0,
+      "context": "milestone.completed ? 'text-green-400' : 'text-purple-400'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 315,
+      "column": 42,
+      "context": "<span className=\"text-purple-400\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 315,
+      "column": 0,
+      "context": "<span className=\"text-purple-400\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 325,
+      "column": 0,
+      "context": ": 'bg-gradient-to-r from-purple-500 to-pink-500'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 371,
+      "column": 41,
+      "context": "showOnlyFollowing && 'bg-purple-500/30'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 371,
+      "column": 0,
+      "context": "showOnlyFollowing && 'bg-purple-500/30'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 389,
+      "column": 24,
+      "context": "? 'bg-purple-500/30 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 389,
+      "column": 0,
+      "context": "? 'bg-purple-500/30 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 409,
+      "column": 26,
+      "context": "? 'bg-purple-500/20 text-purple-400'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 409,
+      "column": 0,
+      "context": "? 'bg-purple-500/20 text-purple-400'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 426,
+      "column": 160,
+      "context": "className=\"pl-10 pr-4 py-1.5 bg-gray-800/50 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 426,
+      "column": 0,
+      "context": "className=\"pl-10 pr-4 py-1.5 bg-gray-800/50 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 443,
+      "column": 46,
+      "context": "<Trophy className=\"w-12 h-12 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 443,
+      "column": 0,
+      "context": "<Trophy className=\"w-12 h-12 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 479,
+      "column": 53,
+      "context": "'p-3 cursor-pointer hover:bg-purple-500/10 transition-all',",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 479,
+      "column": 0,
+      "context": "'p-3 cursor-pointer hover:bg-purple-500/10 transition-all',",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 480,
+      "column": 51,
+      "context": "entry.isCurrentUser && 'border-purple-500/50 bg-purple-500/10',",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 480,
+      "column": 0,
+      "context": "entry.isCurrentUser && 'border-purple-500/50 bg-purple-500/10',",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 500,
+      "column": 0,
+      "context": "<div className=\"w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 507,
+      "column": 72,
+      "context": "<span className=\"text-xs px-2 py-0.5 bg-purple-500/30 text-purple-400 rounded\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 507,
+      "column": 0,
+      "context": "<span className=\"text-xs px-2 py-0.5 bg-purple-500/30 text-purple-400 rounded\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 549,
+      "column": 59,
+      "context": "entry.tier === 'platinum' && 'bg-purple-500/20 text-purple-400',",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/Leaderboard.tsx",
+      "line": 549,
+      "column": 0,
+      "context": "entry.tier === 'platinum' && 'bg-purple-500/20 text-purple-400',",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 292,
+      "column": 0,
+      "context": "platinum: 'from-purple-400 to-purple-300',",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 393,
+      "column": 48,
+      "context": "<div className=\"text-3xl font-bold text-purple-400\">{totalPoints}</div>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 393,
+      "column": 0,
+      "context": "<div className=\"text-3xl font-bold text-purple-400\">{totalPoints}</div>",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 407,
+      "column": 0,
+      "context": "className=\"h-full bg-gradient-to-r from-purple-500 to-pink-500\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 485,
+      "column": 45,
+      "context": "<p className=\"text-xs text-purple-400\">{milestone.reward}</p>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 485,
+      "column": 0,
+      "context": "<p className=\"text-xs text-purple-400\">{milestone.reward}</p>",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 492,
+      "column": 0,
+      "context": "className=\"h-full bg-gradient-to-r from-purple-500 to-pink-500\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 515,
+      "column": 22,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 515,
+      "column": 0,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 531,
+      "column": 20,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 531,
+      "column": 0,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 546,
+      "column": 24,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 546,
+      "column": 0,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 631,
+      "column": 50,
+      "context": "<span className=\"text-xs text-purple-400\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/gamification/AchievementSystem.tsx",
+      "line": 631,
+      "column": 0,
+      "context": "<span className=\"text-xs text-purple-400\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 130,
+      "column": 155,
+      "context": "className=\"w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 130,
+      "column": 0,
+      "context": "className=\"w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 142,
+      "column": 0,
+      "context": "? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 156,
+      "column": 0,
+      "context": "? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 172,
+      "column": 41,
+      "context": "sortBy === 'popular' ? 'bg-purple-500/20 text-purple-400' : 'text-gray-400 hover:text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 172,
+      "column": 0,
+      "context": "sortBy === 'popular' ? 'bg-purple-500/20 text-purple-400' : 'text-gray-400 hover:text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 183,
+      "column": 40,
+      "context": "sortBy === 'rating' ? 'bg-purple-500/20 text-purple-400' : 'text-gray-400 hover:text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 183,
+      "column": 0,
+      "context": "sortBy === 'rating' ? 'bg-purple-500/20 text-purple-400' : 'text-gray-400 hover:text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 194,
+      "column": 40,
+      "context": "sortBy === 'newest' ? 'bg-purple-500/20 text-purple-400' : 'text-gray-400 hover:text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 194,
+      "column": 0,
+      "context": "sortBy === 'newest' ? 'bg-purple-500/20 text-purple-400' : 'text-gray-400 hover:text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 259,
+      "column": 73,
+      "context": "selectedTemplateId === template.id && 'ring-2 ring-purple-500'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 259,
+      "column": 0,
+      "context": "selectedTemplateId === template.id && 'ring-2 ring-purple-500'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 293,
+      "column": 60,
+      "context": "<span className=\"px-2 py-1 bg-purple-500 text-white text-xs font-bold rounded-full flex items-center gap-1\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 293,
+      "column": 0,
+      "context": "<span className=\"px-2 py-1 bg-purple-500 text-white text-xs font-bold rounded-full flex items-center gap-1\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 320,
+      "column": 77,
+      "context": "<h3 className=\"font-medium text-white group-hover:text-purple-400 transition-colors line-clamp-1\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/generation/TemplateSelector.tsx",
+      "line": 320,
+      "column": 0,
+      "context": "<h3 className=\"font-medium text-white group-hover:text-purple-400 transition-colors line-clamp-1\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/LivePreviewCanvas.tsx",
+      "line": 87,
+      "column": 50,
+      "context": "<Sparkles className=\"w-full h-full text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/generation/LivePreviewCanvas.tsx",
+      "line": 87,
+      "column": 0,
+      "context": "<Sparkles className=\"w-full h-full text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/LivePreviewCanvas.tsx",
+      "line": 92,
+      "column": 0,
+      "context": "className=\"h-full bg-gradient-to-r from-purple-500 to-pink-500\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/LivePreviewCanvas.tsx",
+      "line": 150,
+      "column": 69,
+      "context": "<div className=\"absolute top-2 left-2 px-2 py-1 bg-purple-500/50 backdrop-blur-sm rounded text-white text-xs\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/generation/LivePreviewCanvas.tsx",
+      "line": 150,
+      "column": 0,
+      "context": "<div className=\"absolute top-2 left-2 px-2 py-1 bg-purple-500/50 backdrop-blur-sm rounded text-white text-xs\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/LivePreviewCanvas.tsx",
+      "line": 234,
+      "column": 24,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/generation/LivePreviewCanvas.tsx",
+      "line": 234,
+      "column": 0,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/LivePreviewCanvas.tsx",
+      "line": 246,
+      "column": 24,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/generation/LivePreviewCanvas.tsx",
+      "line": 246,
+      "column": 0,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/generation/LivePreviewCanvas.tsx",
+      "line": 258,
+      "column": 24,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/generation/LivePreviewCanvas.tsx",
+      "line": 258,
+      "column": 0,
+      "context": "? 'bg-purple-500 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 88,
+      "column": 0,
+      "context": "<h1 className=\"text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 109,
+      "column": 48,
+      "context": "<div className=\"text-2xl font-bold text-purple-400\">$2.1M+</div>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 109,
+      "column": 0,
+      "context": "<div className=\"text-2xl font-bold text-purple-400\">$2.1M+</div>",
+      "type": "named"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 130,
+      "column": 24,
+      "context": "? 'bg-purple-600 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 130,
+      "column": 0,
+      "context": "? 'bg-purple-600 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 191,
+      "column": 102,
+      "context": "<LiquidGlassContainer className=\"p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 191,
+      "column": 0,
+      "context": "<LiquidGlassContainer className=\"p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 223,
+      "column": 0,
+      "context": "<button className=\"bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 247,
+      "column": 44,
+      "context": "return { text: 'Pro Only', color: 'bg-purple-500/20 text-purple-300' };",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 247,
+      "column": 0,
+      "context": "return { text: 'Pro Only', color: 'bg-purple-500/20 text-purple-300' };",
+      "type": "named"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 265,
+      "column": 0,
+      "context": "<div className=\"relative aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg overflow-hidden\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 267,
+      "column": 48,
+      "context": "<PlayCircle className=\"w-12 h-12 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 267,
+      "column": 0,
+      "context": "<PlayCircle className=\"w-12 h-12 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 356,
+      "column": 0,
+      "context": "<div className=\"w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-1\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 384,
+      "column": 35,
+      "context": "className=\"w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/education/WhopCreatorCourses.tsx",
+      "line": 384,
+      "column": 0,
+      "context": "className=\"w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 128,
+      "column": 40,
+      "context": "<Sparkles className=\"w-6 h-6 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 128,
+      "column": 0,
+      "context": "<Sparkles className=\"w-6 h-6 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 147,
+      "column": 28,
+      "context": "? 'bg-purple-600 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 147,
+      "column": 0,
+      "context": "? 'bg-purple-600 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 195,
+      "column": 34,
+      "context": "? 'border-purple-500 bg-purple-500/10'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 195,
+      "column": 0,
+      "context": "? 'border-purple-500 bg-purple-500/10'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 201,
+      "column": 0,
+      "context": "<div className=\"aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded mb-3 flex items-center justify-center\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 202,
+      "column": 58,
+      "context": "<Sparkles className=\"w-8 h-8 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 226,
+      "column": 34,
+      "context": "className=\"bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg transition-colors\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 226,
+      "column": 0,
+      "context": "className=\"bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg transition-colors\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 261,
+      "column": 138,
+      "context": "className=\"w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 261,
+      "column": 0,
+      "context": "className=\"w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 274,
+      "column": 138,
+      "context": "className=\"w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none resize-none\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 274,
+      "column": 0,
+      "context": "className=\"w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none resize-none\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 301,
+      "column": 48,
+      "context": "className=\"w-4 h-4 text-purple-500 rounded\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 301,
+      "column": 0,
+      "context": "className=\"w-4 h-4 text-purple-500 rounded\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 323,
+      "column": 138,
+      "context": "className=\"w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 323,
+      "column": 0,
+      "context": "className=\"w-full px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 337,
+      "column": 34,
+      "context": "className=\"bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg transition-colors\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 337,
+      "column": 0,
+      "context": "className=\"bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg transition-colors\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 378,
+      "column": 0,
+      "context": "color: 'purple'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 423,
+      "column": 37,
+      "context": "<div className=\"bg-purple-500/10 border border-purple-500/20 rounded-lg p-4\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 423,
+      "column": 0,
+      "context": "<div className=\"bg-purple-500/10 border border-purple-500/20 rounded-lg p-4\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 424,
+      "column": 55,
+      "context": "<label className=\"block text-sm text-purple-300 mb-2\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 424,
+      "column": 0,
+      "context": "<label className=\"block text-sm text-purple-300 mb-2\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 438,
+      "column": 127,
+      "context": "className=\"w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-purple-500 focus:outline-none\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 438,
+      "column": 0,
+      "context": "className=\"w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-purple-500 focus:outline-none\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 442,
+      "column": 45,
+      "context": "<p className=\"text-xs text-purple-300 mt-2\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 442,
+      "column": 0,
+      "context": "<p className=\"text-xs text-purple-300 mt-2\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 458,
+      "column": 34,
+      "context": "className=\"bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg transition-colors\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 458,
+      "column": 0,
+      "context": "className=\"bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white px-6 py-2 rounded-lg transition-colors\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 494,
+      "column": 67,
+      "context": "submissionData.shareType === 'premium' ? 'text-purple-400' :",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 494,
+      "column": 0,
+      "context": "submissionData.shareType === 'premium' ? 'text-purple-400' :",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 559,
+      "column": 52,
+      "context": "<Sparkles className=\"w-12 h-12 text-purple-400 mx-auto mb-4\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 559,
+      "column": 0,
+      "context": "<Sparkles className=\"w-12 h-12 text-purple-400 mx-auto mb-4\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 601,
+      "column": 41,
+      "context": "className=\"w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition-colors\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateSubmissionModal.tsx",
+      "line": 601,
+      "column": 0,
+      "context": "className=\"w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition-colors\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 77,
+      "column": 0,
+      "context": "<h1 className=\"text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent mb-4\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 98,
+      "column": 48,
+      "context": "<div className=\"text-2xl font-bold text-purple-400\">$15K+</div>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 98,
+      "column": 0,
+      "context": "<div className=\"text-2xl font-bold text-purple-400\">$15K+</div>",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 119,
+      "column": 136,
+      "context": "className=\"w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 119,
+      "column": 0,
+      "context": "className=\"w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 129,
+      "column": 102,
+      "context": "className=\"px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-purple-500 focus:outline-none\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 129,
+      "column": 0,
+      "context": "className=\"px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-purple-500 focus:outline-none\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 146,
+      "column": 26,
+      "context": "? 'bg-purple-600 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 146,
+      "column": 0,
+      "context": "? 'bg-purple-600 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 159,
+      "column": 102,
+      "context": "className=\"px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-purple-500 focus:outline-none\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 159,
+      "column": 0,
+      "context": "className=\"px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-purple-500 focus:outline-none\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 172,
+      "column": 42,
+      "context": "viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 172,
+      "column": 0,
+      "context": "viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 180,
+      "column": 42,
+      "context": "viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 180,
+      "column": 0,
+      "context": "viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 204,
+      "column": 0,
+      "context": "<div className=\"w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mx-auto mb-2 flex items-center justify-center\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 239,
+      "column": 70,
+      "context": "<div className=\"inline-flex items-center gap-3 px-6 py-3 bg-purple-500/10 border border-purple-500/20 rounded-full\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 239,
+      "column": 0,
+      "context": "<div className=\"inline-flex items-center gap-3 px-6 py-3 bg-purple-500/10 border border-purple-500/20 rounded-full\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 240,
+      "column": 48,
+      "context": "<div className=\"w-5 h-5 border-2 border-purple-400 border-t-transparent rounded-full animate-spin\"></div>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 241,
+      "column": 32,
+      "context": "<span className=\"text-purple-300 font-medium\">Loading community templates...</span>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 241,
+      "column": 0,
+      "context": "<span className=\"text-purple-300 font-medium\">Loading community templates...</span>",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 274,
+      "column": 30,
+      "context": "<button className=\"bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 274,
+      "column": 0,
+      "context": "<button className=\"bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 311,
+      "column": 0,
+      "context": "<div className=\"w-32 h-20 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 312,
+      "column": 37,
+      "context": "<Zap className=\"w-8 h-8 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 365,
+      "column": 32,
+      "context": "className=\"p-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 365,
+      "column": 0,
+      "context": "className=\"p-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 397,
+      "column": 0,
+      "context": "<div className=\"relative aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg overflow-hidden\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 399,
+      "column": 41,
+      "context": "<Zap className=\"w-12 h-12 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 399,
+      "column": 0,
+      "context": "<Zap className=\"w-12 h-12 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 410,
+      "column": 44,
+      "context": "<span className=\"px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 410,
+      "column": 0,
+      "context": "<span className=\"px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 431,
+      "column": 0,
+      "context": "<div className=\"w-6 h-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 487,
+      "column": 45,
+      "context": "className=\"flex-1 py-2 px-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm transition-colors\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/community/TemplateMarketplace.tsx",
+      "line": 487,
+      "column": 0,
+      "context": "className=\"flex-1 py-2 px-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm transition-colors\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 142,
+      "column": 0,
+      "context": "color: '#8B5CF6',",
+      "type": "hex"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 324,
+      "column": 30,
+      "context": "case 'editor': return 'text-purple-400';",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 324,
+      "column": 0,
+      "context": "case 'editor': return 'text-purple-400';",
+      "type": "named"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 348,
+      "column": 26,
+      "context": "? 'bg-purple-500/30 text-purple-400'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 348,
+      "column": 0,
+      "context": "? 'bg-purple-500/30 text-purple-400'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 404,
+      "column": 26,
+      "context": "? 'bg-purple-500/20 text-purple-400'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 404,
+      "column": 0,
+      "context": "? 'bg-purple-500/20 text-purple-400'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 417,
+      "column": 26,
+      "context": "? 'bg-purple-500/20 text-purple-400'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 417,
+      "column": 0,
+      "context": "? 'bg-purple-500/20 text-purple-400'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 430,
+      "column": 26,
+      "context": "? 'bg-purple-500/20 text-purple-400'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 430,
+      "column": 0,
+      "context": "? 'bg-purple-500/20 text-purple-400'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 557,
+      "column": 43,
+      "context": "<Users className=\"w-4 h-4 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 557,
+      "column": 0,
+      "context": "<Users className=\"w-4 h-4 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 616,
+      "column": 51,
+      "context": "<MessageSquare className=\"w-4 h-4 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 616,
+      "column": 0,
+      "context": "<MessageSquare className=\"w-4 h-4 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 680,
+      "column": 161,
+      "context": "className=\"flex-1 px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 680,
+      "column": 0,
+      "context": "className=\"flex-1 px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 743,
+      "column": 89,
+      "context": "<input type=\"radio\" name=\"permission\" defaultChecked className=\"text-purple-500\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 743,
+      "column": 0,
+      "context": "<input type=\"radio\" name=\"permission\" defaultChecked className=\"text-purple-500\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 744,
+      "column": 50,
+      "context": "<Edit className=\"w-4 h-4 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 748,
+      "column": 74,
+      "context": "<input type=\"radio\" name=\"permission\" className=\"text-purple-500\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/collaboration/CollaborationPanel.tsx",
+      "line": 748,
+      "column": 0,
+      "context": "<input type=\"radio\" name=\"permission\" className=\"text-purple-500\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/certification/CertificationDashboard.tsx",
+      "line": 232,
+      "column": 40,
+      "context": "<button className=\"text-purple-400 hover:text-purple-300 transition-colors\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/certification/CertificationDashboard.tsx",
+      "line": 232,
+      "column": 0,
+      "context": "<button className=\"text-purple-400 hover:text-purple-300 transition-colors\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/certification/CertificationDashboard.tsx",
+      "line": 263,
+      "column": 0,
+      "context": ": 'bg-gradient-to-br from-blue-400 to-purple-500'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/certification/CertificationDashboard.tsx",
+      "line": 315,
+      "column": 38,
+      "context": "className=\"bg-purple-500 h-2 rounded-full transition-all\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/certification/CertificationDashboard.tsx",
+      "line": 315,
+      "column": 0,
+      "context": "className=\"bg-purple-500 h-2 rounded-full transition-all\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/certification/CertificationDashboard.tsx",
+      "line": 328,
+      "column": 51,
+      "context": "<Zap className=\"w-3 h-3 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/certification/CertificationDashboard.tsx",
+      "line": 328,
+      "column": 0,
+      "context": "<Zap className=\"w-3 h-3 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/certification/CertificationDashboard.tsx",
+      "line": 464,
+      "column": 0,
+      "context": "<div className=\"w-10 h-10 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/billing/CreditPurchaseModal.tsx",
+      "line": 169,
+      "column": 0,
+      "context": "className=\"w-full mt-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors disabled:opacity-50\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/billing/CreditDashboard.tsx",
+      "line": 51,
+      "column": 13,
+      "context": "pro: \"text-purple-400\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/billing/CreditDashboard.tsx",
+      "line": 51,
+      "column": 0,
+      "context": "pro: \"text-purple-400\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/billing/CreditDashboard.tsx",
+      "line": 79,
+      "column": 44,
+      "context": "<span className=\"px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/billing/CreditDashboard.tsx",
+      "line": 79,
+      "column": 0,
+      "context": "<span className=\"px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/billing/CreditDashboard.tsx",
+      "line": 164,
+      "column": 39,
+      "context": "<button className=\"w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg transition-colors font-medium\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/billing/CreditDashboard.tsx",
+      "line": 164,
+      "column": 0,
+      "context": "<button className=\"w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg transition-colors font-medium\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/billing/CreditDashboard.tsx",
+      "line": 170,
+      "column": 0,
+      "context": "<button className=\"w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white py-3 px-4 rounded-lg transition-colors font-medium\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 128,
+      "column": 0,
+      "context": "<h1 className=\"text-3xl font-bold bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 143,
+      "column": 22,
+      "context": "? 'bg-purple-600 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 143,
+      "column": 0,
+      "context": "? 'bg-purple-600 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 191,
+      "column": 48,
+      "context": "<p className=\"text-2xl font-bold text-purple-400\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 191,
+      "column": 0,
+      "context": "<p className=\"text-2xl font-bold text-purple-400\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 194,
+      "column": 37,
+      "context": "<p className=\"text-xs text-purple-300 flex items-center gap-1\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 194,
+      "column": 0,
+      "context": "<p className=\"text-xs text-purple-300 flex items-center gap-1\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 199,
+      "column": 37,
+      "context": "<Eye className=\"w-8 h-8 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 199,
+      "column": 0,
+      "context": "<Eye className=\"w-8 h-8 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 236,
+      "column": 24,
+      "context": "? 'bg-purple-600 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 236,
+      "column": 0,
+      "context": "? 'bg-purple-600 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 341,
+      "column": 27,
+      "context": "stroke=\"#8b5cf6\"",
+      "type": "hex"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 343,
+      "column": 33,
+      "context": "dot={{ fill: '#8b5cf6', strokeWidth: 2, r: 4 }}",
+      "type": "hex"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 344,
+      "column": 47,
+      "context": "activeDot={{ r: 6, stroke: '#8b5cf6', strokeWidth: 2 }}",
+      "type": "hex"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 410,
+      "column": 0,
+      "context": "<div className=\"w-10 h-10 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 411,
+      "column": 55,
+      "context": "<ShoppingBag className=\"w-5 h-5 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 444,
+      "column": 39,
+      "context": "<Users className=\"w-5 h-5 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 444,
+      "column": 0,
+      "context": "<Users className=\"w-5 h-5 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 462,
+      "column": 50,
+      "context": "<div className=\"text-2xl font-bold text-purple-400\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 462,
+      "column": 0,
+      "context": "<div className=\"text-2xl font-bold text-purple-400\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 576,
+      "column": 104,
+      "context": "<LiquidGlassContainer className=\"p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 576,
+      "column": 0,
+      "context": "<LiquidGlassContainer className=\"p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/analytics/ROIAnalyticsDashboard.tsx",
+      "line": 593,
+      "column": 0,
+      "context": "<button className=\"bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 202,
+      "column": 41,
+      "context": "<Brain className=\"w-6 h-6 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 202,
+      "column": 0,
+      "context": "<Brain className=\"w-6 h-6 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 235,
+      "column": 0,
+      "context": "className=\"flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg hover:from-purple-500/30 hover:to-pink-500/30 transition-all\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 242,
+      "column": 55,
+      "context": "<action.icon className=\"w-4 h-4 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 242,
+      "column": 0,
+      "context": "<action.icon className=\"w-4 h-4 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 271,
+      "column": 63,
+      "context": "className=\"p-3 cursor-pointer hover:bg-purple-500/10 transition-all\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 271,
+      "column": 0,
+      "context": "className=\"p-3 cursor-pointer hover:bg-purple-500/10 transition-all\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 275,
+      "column": 49,
+      "context": "<div className=\"p-2 bg-purple-500/20 rounded-lg\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 275,
+      "column": 0,
+      "context": "<div className=\"p-2 bg-purple-500/20 rounded-lg\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 276,
+      "column": 67,
+      "context": "<suggestion.icon className=\"w-4 h-4 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 276,
+      "column": 0,
+      "context": "<suggestion.icon className=\"w-4 h-4 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 287,
+      "column": 0,
+      "context": "className=\"h-full bg-gradient-to-r from-purple-500 to-pink-500\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 328,
+      "column": 0,
+      "context": "<div className=\"w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 336,
+      "column": 34,
+      "context": "? 'bg-purple-500/20 text-white'",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 336,
+      "column": 0,
+      "context": "? 'bg-purple-500/20 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 347,
+      "column": 95,
+      "context": "className=\"flex items-center gap-2 w-full p-2 rounded hover:bg-purple-500/10 transition-colors\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 347,
+      "column": 0,
+      "context": "className=\"flex items-center gap-2 w-full p-2 rounded hover:bg-purple-500/10 transition-colors\"",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 349,
+      "column": 71,
+      "context": "<suggestion.icon className=\"w-4 h-4 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 349,
+      "column": 0,
+      "context": "<suggestion.icon className=\"w-4 h-4 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 369,
+      "column": 0,
+      "context": "<div className=\"w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center\">",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 374,
+      "column": 70,
+      "context": "<Loader2 className=\"w-4 h-4 animate-spin text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 374,
+      "column": 0,
+      "context": "<Loader2 className=\"w-4 h-4 animate-spin text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 394,
+      "column": 155,
+      "context": "className=\"flex-1 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors\"",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/components/ai/AIAssistantPanel.tsx",
+      "line": 394,
+      "column": 0,
+      "context": "className=\"flex-1 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors\"",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/page.tsx",
+      "line": 6,
+      "column": 0,
+      "context": "<div className=\"min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 flex items-center justify-center\">",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/page.tsx",
+      "line": 8,
+      "column": 66,
+      "context": "<div className=\"inline-flex items-center gap-3 px-6 py-3 bg-purple-500/10 border border-purple-500/20 rounded-full\">",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/app/studio/page.tsx",
+      "line": 8,
+      "column": 0,
+      "context": "<div className=\"inline-flex items-center gap-3 px-6 py-3 bg-purple-500/10 border border-purple-500/20 rounded-full\">",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/page.tsx",
+      "line": 9,
+      "column": 44,
+      "context": "<div className=\"w-5 h-5 border-2 border-purple-400 border-t-transparent rounded-full animate-spin\"></div>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/app/studio/page.tsx",
+      "line": 10,
+      "column": 28,
+      "context": "<span className=\"text-purple-300 font-medium\">Loading MockupMagic AI...</span>",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/app/studio/page.tsx",
+      "line": 10,
+      "column": 0,
+      "context": "<span className=\"text-purple-300 font-medium\">Loading MockupMagic AI...</span>",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 256,
+      "column": 0,
+      "context": "<div className=\"min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900\" data-testid=\"studio-container\">",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 259,
+      "column": 0,
+      "context": "<div className=\"absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 animate-pulse\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 284,
+      "column": 0,
+      "context": "<h1 className=\"text-5xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4\">",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 310,
+      "column": 0,
+      "context": "? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg'",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 346,
+      "column": 0,
+      "context": "? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white'",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 358,
+      "column": 0,
+      "context": "className=\"h-full bg-gradient-to-r from-indigo-500 to-purple-500\"",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 387,
+      "column": 43,
+      "context": "<Wand2 className=\"w-6 h-6 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 387,
+      "column": 0,
+      "context": "<Wand2 className=\"w-6 h-6 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 458,
+      "column": 0,
+      "context": "className=\"bg-gradient-to-r from-indigo-500 to-purple-500 h-2 rounded-full transition-all duration-500\"",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 472,
+      "column": 0,
+      "context": "className=\"mt-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg hover:opacity-90 transition-opacity\"",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 492,
+      "column": 56,
+      "context": "<Sparkles className=\"w-16 h-16 text-purple-400 mb-4\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 492,
+      "column": 0,
+      "context": "<Sparkles className=\"w-16 h-16 text-purple-400 mb-4\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 517,
+      "column": 46,
+      "context": "<Settings className=\"w-5 h-5 text-purple-400\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 517,
+      "column": 0,
+      "context": "<Settings className=\"w-5 h-5 text-purple-400\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 562,
+      "column": 63,
+      "context": "<input type=\"checkbox\" className=\"w-4 h-4 text-purple-500\" />",
+      "type": "tailwind"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 562,
+      "column": 0,
+      "context": "<input type=\"checkbox\" className=\"w-4 h-4 text-purple-500\" />",
+      "type": "named"
+    },
+    {
+      "file": "src/app/studio/StudioPageContent.tsx",
+      "line": 570,
+      "column": 0,
+      "context": "className=\"w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed\"",
+      "type": "named"
+    },
+    {
+      "file": "src/app/dashboard/page.tsx",
+      "line": 36,
+      "column": 0,
+      "context": "color: 'from-purple-500 to-pink-500'",
+      "type": "named"
+    },
+    {
+      "file": "src/app/dashboard/page.tsx",
+      "line": 182,
+      "column": 0,
+      "context": "<div className=\"h-10 w-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center\">",
+      "type": "named"
+    },
+    {
+      "file": "src/app/[[...slug]]/page.tsx",
+      "line": 28,
+      "column": 0,
+      "context": "<div className=\"min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900\">",
+      "type": "named"
+    },
+    {
+      "file": "src/app/[[...slug]]/page.tsx",
+      "line": 58,
+      "column": 0,
+      "context": "className=\"inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold text-lg rounded-xl hover:opacity-90 transition-all transform hover:scale-105 shadow-2xl\"",
+      "type": "named"
+    }
+  ]
+}

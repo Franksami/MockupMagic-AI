@@ -125,7 +125,7 @@ export function ROIAnalyticsDashboard({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-green-400 via-blue-400 to-primary-400 bg-clip-text text-transparent">
             ROI Analytics Dashboard
           </h1>
           <p className="text-gray-300 mt-2">
@@ -140,7 +140,7 @@ export function ROIAnalyticsDashboard({
               key={range}
               className={`px-3 py-1 rounded text-sm transition-colors ${
                 timeRange === range
-                  ? 'bg-purple-600 text-white'
+                  ? 'bg-primary-600 text-white'
                   : 'text-gray-400 hover:text-white'
               }`}
             >
@@ -188,15 +188,15 @@ export function ROIAnalyticsDashboard({
           <div className="flex items-center justify-between">
             <div>
               <p className="text-gray-400 text-sm">Additional Page Views</p>
-              <p className="text-2xl font-bold text-purple-400">
+              <p className="text-2xl font-bold text-primary-400">
                 {aggregatedMetrics.totalViewsIncrease.toLocaleString()}
               </p>
-              <p className="text-xs text-purple-300 flex items-center gap-1">
+              <p className="text-xs text-primary-300 flex items-center gap-1">
                 <Eye className="w-3 h-3" />
                 This month
               </p>
             </div>
-            <Eye className="w-8 h-8 text-purple-400" />
+            <Eye className="w-8 h-8 text-primary-400" />
           </div>
         </LiquidGlassCard>
 
@@ -233,7 +233,7 @@ export function ROIAnalyticsDashboard({
                 onClick={() => setSelectedMetric(metric.key as any)}
                 className={`flex items-center gap-2 px-3 py-2 rounded text-sm transition-colors ${
                   selectedMetric === metric.key
-                    ? 'bg-purple-600 text-white'
+                    ? 'bg-primary-600 text-white'
                     : 'text-gray-400 hover:text-white'
                 }`}
               >
@@ -338,10 +338,10 @@ export function ROIAnalyticsDashboard({
                 <Line
                   type="monotone"
                   dataKey="pageViews"
-                  stroke="#8b5cf6"
+                  stroke="#FA4616"
                   strokeWidth={3}
-                  dot={{ fill: '#8b5cf6', strokeWidth: 2, r: 4 }}
-                  activeDot={{ r: 6, stroke: '#8b5cf6', strokeWidth: 2 }}
+                  dot={{ fill: '#FA4616', strokeWidth: 2, r: 4 }}
+                  activeDot={{ r: 6, stroke: '#FA4616', strokeWidth: 2 }}
                 />
               </RechartsLineChart>
             ) : (
@@ -407,8 +407,8 @@ export function ROIAnalyticsDashboard({
                   className="flex items-center justify-between p-4 bg-gray-800/50 rounded-lg"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center">
-                      <ShoppingBag className="w-5 h-5 text-purple-400" />
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary-500/20 to-pink-500/20 rounded-lg flex items-center justify-center">
+                      <ShoppingBag className="w-5 h-5 text-primary-400" />
                     </div>
                     <div>
                       <h4 className="font-medium text-white">Store {analytics.whopStoreId.slice(-6)}</h4>
@@ -441,7 +441,7 @@ export function ROIAnalyticsDashboard({
       {communityROI && (
         <LiquidGlassContainer className="p-6">
           <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-            <Users className="w-5 h-5 text-purple-400" />
+            <Users className="w-5 h-5 text-primary-400" />
             Community Benchmarks
           </h3>
 
@@ -459,7 +459,7 @@ export function ROIAnalyticsDashboard({
               <div className="text-sm text-gray-400">Avg Sales Increase</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-400">
+              <div className="text-2xl font-bold text-primary-400">
                 +{communityROI.communityStats.avgViewsIncrease.toFixed(1)}%
               </div>
               <div className="text-sm text-gray-400">Avg Views Increase</div>
@@ -573,7 +573,7 @@ export function ROIAnalyticsDashboard({
 
       {/* Upgrade Prompt for Advanced Analytics */}
       {whopUser && (
-        <LiquidGlassContainer className="p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20">
+        <LiquidGlassContainer className="p-6 bg-gradient-to-r from-primary-500/10 to-pink-500/10 border border-primary-500/20">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-lg font-semibold text-white mb-2">
@@ -590,7 +590,7 @@ export function ROIAnalyticsDashboard({
               </ul>
             </div>
             <div className="text-center">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+              <button className="bg-gradient-to-r from-primary-600 to-pink-600 hover:from-primary-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
                 Upgrade to Pro
               </button>
               <p className="text-xs text-gray-400 mt-2">$79/month</p>

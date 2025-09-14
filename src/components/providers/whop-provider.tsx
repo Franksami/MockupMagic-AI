@@ -74,7 +74,7 @@ export function WhopProvider({ children }: WhopProviderProps) {
   // Prevent hydration mismatch by not rendering until mounted
   if (!mounted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-primary-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="animate-spin w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full" />
       </div>
     );

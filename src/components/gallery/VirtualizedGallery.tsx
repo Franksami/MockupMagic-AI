@@ -167,7 +167,7 @@ export const VirtualizedGallery: React.FC<VirtualizedGalleryProps> = ({
             glow={isSelected}
             className={cn(
               'p-4 cursor-pointer transition-all',
-              isSelected && 'ring-2 ring-purple-500'
+              isSelected && 'ring-2 ring-primary-500'
             )}
             onClick={() => onMockupClick?.(mockup)}
           >
@@ -180,7 +180,7 @@ export const VirtualizedGallery: React.FC<VirtualizedGalleryProps> = ({
                   e.stopPropagation();
                   toggleSelection(mockup.id);
                 }}
-                className="w-4 h-4 text-purple-500 rounded"
+                className="w-4 h-4 text-primary-500 rounded"
                 onClick={(e) => e.stopPropagation()}
               />
 
@@ -188,7 +188,7 @@ export const VirtualizedGallery: React.FC<VirtualizedGalleryProps> = ({
               <div className="w-20 h-20 rounded-lg overflow-hidden bg-gray-800">
                 {mockup.status === 'generating' ? (
                   <div className="w-full h-full flex items-center justify-center">
-                    <Loader2 className="w-6 h-6 animate-spin text-purple-400" />
+                    <Loader2 className="w-6 h-6 animate-spin text-primary-400" />
                   </div>
                 ) : (
                   <img
@@ -233,7 +233,7 @@ export const VirtualizedGallery: React.FC<VirtualizedGalleryProps> = ({
               <div className="flex items-center gap-2">
                 {mockup.status === 'generating' ? (
                   <div className="text-center">
-                    <Loader2 className="w-5 h-5 animate-spin text-purple-400 mb-1" />
+                    <Loader2 className="w-5 h-5 animate-spin text-primary-400 mb-1" />
                     <span className="text-xs text-gray-400">{mockup.progress}%</span>
                   </div>
                 ) : mockup.status === 'ready' ? (
@@ -296,7 +296,7 @@ export const VirtualizedGallery: React.FC<VirtualizedGalleryProps> = ({
           glow={isSelected}
           className={cn(
             'cursor-pointer transition-all overflow-hidden group',
-            isSelected && 'ring-2 ring-purple-500'
+            isSelected && 'ring-2 ring-primary-500'
           )}
           onClick={() => onMockupClick?.(mockup)}
         >
@@ -308,12 +308,12 @@ export const VirtualizedGallery: React.FC<VirtualizedGalleryProps> = ({
                   animate={{ rotate: 360 }}
                   transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
                 >
-                  <Sparkles className="w-12 h-12 text-purple-400 mb-3" />
+                  <Sparkles className="w-12 h-12 text-primary-400 mb-3" />
                 </motion.div>
                 <p className="text-white text-sm mb-2">Generating...</p>
                 <div className="w-32 h-1 bg-gray-700 rounded-full overflow-hidden">
                   <motion.div
-                    className="h-full bg-gradient-to-r from-purple-500 to-pink-500"
+                    className="h-full bg-gradient-to-r from-primary-500 to-pink-500"
                     initial={{ width: '0%' }}
                     animate={{ width: `${mockup.progress || 0}%` }}
                     transition={{ duration: 0.3 }}
@@ -340,7 +340,7 @@ export const VirtualizedGallery: React.FC<VirtualizedGalleryProps> = ({
                         e.stopPropagation();
                         toggleSelection(mockup.id);
                       }}
-                      className="w-4 h-4 text-purple-500 rounded"
+                      className="w-4 h-4 text-primary-500 rounded"
                       onClick={(e) => e.stopPropagation()}
                     />
                   </div>
@@ -405,7 +405,7 @@ export const VirtualizedGallery: React.FC<VirtualizedGalleryProps> = ({
 
           {/* Info Section */}
           <div className="p-4">
-            <h3 className="font-medium text-white group-hover:text-purple-400 transition-colors line-clamp-1">
+            <h3 className="font-medium text-white group-hover:text-primary-400 transition-colors line-clamp-1">
               {mockup.title}
             </h3>
             <div className="flex items-center justify-between mt-2 text-xs text-gray-400">
@@ -458,7 +458,7 @@ export const VirtualizedGallery: React.FC<VirtualizedGalleryProps> = ({
                 className={cn(
                   'p-2 rounded transition-colors',
                   viewMode === 'grid'
-                    ? 'bg-purple-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : 'text-gray-400 hover:text-white'
                 )}
               >
@@ -469,7 +469,7 @@ export const VirtualizedGallery: React.FC<VirtualizedGalleryProps> = ({
                 className={cn(
                   'p-2 rounded transition-colors',
                   viewMode === 'list'
-                    ? 'bg-purple-500 text-white'
+                    ? 'bg-primary-500 text-white'
                     : 'text-gray-400 hover:text-white'
                 )}
               >

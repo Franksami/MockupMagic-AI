@@ -8,8 +8,8 @@ import { getConvexCircuitBreaker, getWhopCircuitBreaker } from "@/lib/circuit-br
  */
 function isAuthError(error: unknown): boolean {
   if (!error) return false;
-  const message = error.message?.toLowerCase() || '';
-  const errorString = error.toString?.()?.toLowerCase() || '';
+  const message = (error as any).message?.toLowerCase() || '';
+  const errorString = (error as any).toString?.()?.toLowerCase() || '';
 
   return (
     message.includes('invalid') ||
@@ -120,7 +120,12 @@ export async function GET(request: NextRequest) {
       convex,
       whopUser,
       userId,
-      subscriptionData,
+      subscriptionData: {
+        ...subscriptionData,
+        whopProductId: subscriptionData.whopProductId || null,
+        planId: subscriptionData.planId || null,
+        expiresAt: subscriptionData.expiresAt || null
+      },
     });
 
     if (convexResult.success) {
@@ -151,7 +156,7 @@ export async function GET(request: NextRequest) {
     const errorMessage = isAuth ? 'Unauthorized' : 'Authentication failed';
 
     // Even in case of errors, provide fallback response for circuit breaker errors
-    if (error.message?.includes('Circuit breaker') && error.message?.includes('OPEN')) {
+    if ((error as any).message?.includes('Circuit breaker') && (error as any).message?.includes('OPEN')) {
       return NextResponse.json(
         {
           error: 'Service temporarily unavailable',
@@ -165,7 +170,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       {
         error: errorMessage,
-        details: process.env.NODE_ENV === 'development' ? error.message : 'An unexpected error occurred'
+        details: process.env.NODE_ENV === 'development' ? (error as any).message : 'An unexpected error occurred'
       },
       { status: statusCode }
     );
@@ -189,7 +194,7 @@ async function getUserSubscriptionData(userId: string) {
       throw new Error('Failed to fetch user data from Whop');
     }
 
-    const user = userResponse.data;
+    const user = userResponse.data as any; // Type assertion for extended properties
 
     // Define your Whop product ID to tier mapping using environment variables
     const TIER_MAP: Record<string, string> = {
@@ -221,8 +226,8 @@ async function getUserSubscriptionData(userId: string) {
         planId: activeMembership.plan_id,
         expiresAt: activeMembership.expires_at,
         metadata: {
-          whopUsername: user.username,
-          whopEmail: user.email,
+          whopUsername: user.username || '',
+          whopEmail: user.email || '',
           accessPasses: user.access_passes || []
         }
       };
@@ -237,8 +242,8 @@ async function getUserSubscriptionData(userId: string) {
       planId: null,
       expiresAt: null,
       metadata: {
-        whopUsername: user.username,
-        whopEmail: user.email,
+        whopUsername: user.username || '',
+        whopEmail: user.email || '',
         accessPasses: user.access_passes || []
       }
     };
@@ -320,8 +325,8 @@ async function syncUserWithConvex({
       // Try to sync user with Convex with enhanced subscription data
       await convex.mutation(api.auth.syncWhopUser, {
         whopUserId: userId,
-        email: subscriptionData.metadata?.whopEmail || whopUser.email,
-        name: subscriptionData.metadata?.whopUsername || whopUser.name || whopUser.username || "Unknown User",
+        email: (subscriptionData.metadata?.whopEmail as string) || whopUser.email,
+        name: (subscriptionData.metadata?.whopUsername as string) || whopUser.name || whopUser.username || "Unknown User",
         avatarUrl: whopUser.profilePicture,
         subscriptionData: {
           tier: subscriptionData.tier,
@@ -362,5 +367,9 @@ function getFallbackSubscriptionData() {
     tier: "starter",
     subscriptionId: null,
     isActive: false,
+    whopProductId: null,
+    planId: null,
+    expiresAt: null,
+    metadata: {}
   };
 }

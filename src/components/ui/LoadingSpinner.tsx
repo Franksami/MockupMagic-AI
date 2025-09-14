@@ -35,7 +35,7 @@ export function LoadingSpinner({
           animate={{ rotate: 360 }}
           transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
         >
-          <Sparkles className={`${sizeClasses[size]} text-purple-400`} />
+          <Sparkles className={`${sizeClasses[size]} text-primary-400`} />
         </motion.div>
         {text && (
           <p className={`text-gray-300 ${textSizeClasses[size]} font-medium`}>
@@ -52,7 +52,7 @@ export function LoadingSpinner({
         <motion.div
           animate={{ opacity: [0.5, 1, 0.5] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          className={`${sizeClasses[size]} bg-gradient-to-r from-purple-500 to-pink-500 rounded-full`}
+          className={`${sizeClasses[size]} bg-gradient-to-r from-primary-500 to-pink-500 rounded-full`}
         />
         {text && (
           <p className={`text-gray-300 ${textSizeClasses[size]} font-medium`}>
@@ -69,7 +69,7 @@ export function LoadingSpinner({
         animate={{ rotate: 360 }}
         transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
       >
-        <Loader2 className={`${sizeClasses[size]} text-purple-400`} />
+        <Loader2 className={`${sizeClasses[size]} text-primary-400`} />
       </motion.div>
       {text && (
         <p className={`text-gray-300 ${textSizeClasses[size]} font-medium`}>

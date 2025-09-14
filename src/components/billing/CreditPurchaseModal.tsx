@@ -166,7 +166,7 @@ export function CreditPurchaseModal({
                   <motion.button
                     onClick={handlePurchase}
                     disabled={isProcessing}
-                    className="w-full mt-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors disabled:opacity-50"
+                    className="w-full mt-6 bg-gradient-to-r from-blue-600 to-primary-600 hover:from-blue-700 hover:to-primary-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors disabled:opacity-50"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >

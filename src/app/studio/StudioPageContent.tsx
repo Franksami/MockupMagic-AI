@@ -253,10 +253,10 @@ export default function StudioPageContent() {
   }, [isAuthenticated, uploadedFiles, uploadedFileData, selectedTemplateId, fileToBase64, generateMockup]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900" data-testid="studio-container">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900/20 to-gray-900" data-testid="studio-container">
       {/* Animated background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-primary-500/10 to-pink-500/10 animate-pulse" />
         <motion.div
           className="absolute -top-1/2 -left-1/2 w-[200%] h-[200%]"
           animate={{
@@ -281,7 +281,7 @@ export default function StudioPageContent() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-400 via-primary-400 to-pink-400 bg-clip-text text-transparent mb-4">
             MockupMagic AI
           </h1>
           <p className="text-gray-300 text-lg">
@@ -307,7 +307,7 @@ export default function StudioPageContent() {
                 className={cn(
                   'flex items-center gap-2 px-4 py-3 rounded-full transition-all text-sm font-medium',
                   activeTab === tab.id
-                    ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-indigo-500 to-primary-500 text-white shadow-lg'
                     : 'text-gray-400 hover:text-white hover:bg-white/5'
                 )}
                 whileHover={{ scale: 1.005 }}
@@ -343,7 +343,7 @@ export default function StudioPageContent() {
                   className={cn(
                     'flex items-center gap-2 px-4 py-2 rounded-lg transition-all',
                     activeStep === step.id
-                      ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white'
+                      ? 'bg-gradient-to-r from-indigo-500 to-primary-500 text-white'
                       : 'text-gray-400 hover:text-white'
                   )}
                   whileHover={{ scale: 1.05 }}
@@ -355,7 +355,7 @@ export default function StudioPageContent() {
                 {index < 2 && (
                   <div className="w-12 h-0.5 bg-gray-600">
                     <motion.div
-                      className="h-full bg-gradient-to-r from-indigo-500 to-purple-500"
+                      className="h-full bg-gradient-to-r from-indigo-500 to-primary-500"
                       initial={{ width: '0%' }}
                       animate={{
                         width: activeStep === 'generate' || (activeStep === 'customize' && index === 0) ? '100%' : '0%',
@@ -384,7 +384,7 @@ export default function StudioPageContent() {
                   {activeStep === 'customize' && 'Customize Your Mockup'}
                   {activeStep === 'generate' && 'AI Generation'}
                 </h2>
-                <Wand2 className="w-6 h-6 text-purple-400" />
+                <Wand2 className="w-6 h-6 text-primary-400" />
               </div>
 
               {activeStep === 'upload' && (
@@ -455,7 +455,7 @@ export default function StudioPageContent() {
                           {job.status === 'processing' && job.progress && (
                             <div className="w-full bg-gray-700 rounded-full h-2 mb-2">
                               <div
-                                className="bg-gradient-to-r from-indigo-500 to-purple-500 h-2 rounded-full transition-all duration-500"
+                                className="bg-gradient-to-r from-indigo-500 to-primary-500 h-2 rounded-full transition-all duration-500"
                                 style={{ width: `${job.progress}%` }}
                               />
                             </div>
@@ -469,7 +469,7 @@ export default function StudioPageContent() {
                           {/* Download Button for Completed Jobs */}
                           {job.status === 'completed' && job.generatedImageId && (
                             <button
-                              className="mt-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg hover:opacity-90 transition-opacity"
+                              className="mt-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-primary-500 text-white rounded-lg hover:opacity-90 transition-opacity"
                               onClick={() => {
                                 const link = document.createElement('a');
                                 link.href = `/api/download?id=${job.generatedImageId}`;
@@ -489,7 +489,7 @@ export default function StudioPageContent() {
                         animate={{ rotate: 360 }}
                         transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
                       >
-                        <Sparkles className="w-16 h-16 text-purple-400 mb-4" />
+                        <Sparkles className="w-16 h-16 text-primary-400 mb-4" />
                       </motion.div>
                       <p className="text-xl text-white font-medium">Starting generation...</p>
                       <p className="text-gray-400 mt-2">Please wait while we prepare your mockup</p>
@@ -514,7 +514,7 @@ export default function StudioPageContent() {
 
             <LiquidGlassCard variant="medium" className="p-6" data-testid="liquid-glass">
               <div className="flex items-center gap-2 mb-4">
-                <Settings className="w-5 h-5 text-purple-400" />
+                <Settings className="w-5 h-5 text-primary-400" />
                 <h3 className="text-lg font-semibold text-white">Quick Settings</h3>
               </div>
 
@@ -559,7 +559,7 @@ export default function StudioPageContent() {
                   'Add Shadows',
                 ].map((feature) => (
                   <label key={feature} className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" className="w-4 h-4 text-purple-500" />
+                    <input type="checkbox" className="w-4 h-4 text-primary-500" />
                     <span className="text-gray-300">{feature}</span>
                   </label>
                 ))}
@@ -567,7 +567,7 @@ export default function StudioPageContent() {
             </LiquidGlassCard>
 
             <LiquidGlassButton
-              className="w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 bg-gradient-to-r from-indigo-500 to-primary-500 text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
               onClick={() => {
                 if (activeStep === 'upload') {
                   setActiveStep('customize');

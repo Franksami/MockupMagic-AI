@@ -1,0 +1,167 @@
+/**
+ * OKLCH Color System
+ * Modern perceptually uniform color space with wide gamut support
+ * Whop Dragon Fire Orange (#FA4616) theme implementation
+ */
+
+/* Base OKLCH color palette */
+:root {
+  /* Primary - Whop Dragon Fire Orange */
+  --color-primary-50: oklch(95% 0.04 30deg);
+  --color-primary-100: oklch(92% 0.07 30deg);
+  --color-primary-200: oklch(87% 0.11 30deg);
+  --color-primary-300: oklch(82% 0.15 30deg);
+  --color-primary-400: oklch(72% 0.18 30deg);
+  --color-primary-500: oklch(62% 0.20 30deg); /* #FA4616 equivalent */
+  --color-primary-600: oklch(55% 0.19 30deg);
+  --color-primary-700: oklch(48% 0.17 30deg);
+  --color-primary-800: oklch(42% 0.15 30deg);
+  --color-primary-900: oklch(36% 0.12 30deg);
+  --color-primary-950: oklch(28% 0.10 30deg);
+
+  /* Neutral - Balanced grays */
+  --color-neutral-50: oklch(98% 0 0deg);
+  --color-neutral-100: oklch(96% 0 0deg);
+  --color-neutral-200: oklch(91% 0 0deg);
+  --color-neutral-300: oklch(84% 0 0deg);
+  --color-neutral-400: oklch(64% 0 0deg);
+  --color-neutral-500: oklch(50% 0 0deg);
+  --color-neutral-600: oklch(40% 0 0deg);
+  --color-neutral-700: oklch(32% 0 0deg);
+  --color-neutral-800: oklch(25% 0 0deg);
+  --color-neutral-900: oklch(18% 0 0deg);
+  --color-neutral-950: oklch(10% 0 0deg);
+
+  /* Glass morphism backgrounds */
+  --glass-bg-light: oklch(98% 0 0deg / 0.7);
+  --glass-bg-medium: oklch(95% 0 0deg / 0.8);
+  --glass-bg-dark: oklch(20% 0 0deg / 0.7);
+  --glass-border: oklch(90% 0 0deg / 0.2);
+
+  /* Semantic colors */
+  --color-success: oklch(68% 0.15 145deg);
+  --color-warning: oklch(75% 0.15 85deg);
+  --color-error: oklch(62% 0.20 25deg);
+  --color-info: oklch(65% 0.15 250deg);
+
+  /* Surface colors */
+  --color-surface-primary: var(--color-neutral-950);
+  --color-surface-secondary: var(--color-neutral-900);
+  --color-surface-tertiary: var(--color-neutral-800);
+  --color-surface-elevated: oklch(15% 0 0deg);
+
+  /* Text colors */
+  --color-text-primary: var(--color-neutral-50);
+  --color-text-secondary: var(--color-neutral-300);
+  --color-text-tertiary: var(--color-neutral-400);
+  --color-text-disabled: var(--color-neutral-600);
+  --color-text-inverse: var(--color-neutral-950);
+
+  /* Interactive states */
+  --color-hover-overlay: oklch(100% 0 0deg / 0.08);
+  --color-active-overlay: oklch(100% 0 0deg / 0.12);
+  --color-focus-ring: var(--color-primary-500);
+  --color-selection: oklch(62% 0.20 30deg / 0.3);
+}
+
+/* Fallback values for older browsers */
+@supports not (color: oklch(62% 0.20 30deg)) {
+  :root {
+    /* Primary fallbacks */
+    --color-primary-50: #fff4ed;
+    --color-primary-100: #ffe8d5;
+    --color-primary-200: #ffcdab;
+    --color-primary-300: #ffab76;
+    --color-primary-400: #ff7c3f;
+    --color-primary-500: #FA4616; /* Main brand color */
+    --color-primary-600: #ea2e0f;
+    --color-primary-700: #c21e0f;
+    --color-primary-800: #9a1a13;
+    --color-primary-900: #7b1813;
+    --color-primary-950: #430a08;
+
+    /* Neutral fallbacks */
+    --color-neutral-50: #fafafa;
+    --color-neutral-100: #f5f5f5;
+    --color-neutral-200: #e5e5e5;
+    --color-neutral-300: #d4d4d4;
+    --color-neutral-400: #a3a3a3;
+    --color-neutral-500: #737373;
+    --color-neutral-600: #525252;
+    --color-neutral-700: #404040;
+    --color-neutral-800: #262626;
+    --color-neutral-900: #171717;
+    --color-neutral-950: #0a0a0a;
+
+    /* Glass morphism fallbacks */
+    --glass-bg-light: rgba(250, 250, 250, 0.7);
+    --glass-bg-medium: rgba(245, 245, 245, 0.8);
+    --glass-bg-dark: rgba(23, 23, 23, 0.7);
+    --glass-border: rgba(229, 229, 229, 0.2);
+
+    /* Semantic fallbacks */
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-info: #3b82f6;
+  }
+}
+
+/* Theme classes for dual theme support */
+.theme-orange {
+  /* Uses the new OKLCH colors defined above */
+}
+
+.theme-purple {
+  /* Legacy purple theme - temporary during migration */
+  --color-primary-50: #faf5ff;
+  --color-primary-100: #f3e8ff;
+  --color-primary-200: #e9d5ff;
+  --color-primary-300: #d8b4fe;
+  --color-primary-400: #c084fc;
+  --color-primary-500: #8b5cf6; /* Original purple */
+  --color-primary-600: #9333ea;
+  --color-primary-700: #7e22ce;
+  --color-primary-800: #6b21a8;
+  --color-primary-900: #581c87;
+  --color-primary-950: #3b0764;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Invert surface colors for dark mode */
+    --color-surface-primary: var(--color-neutral-50);
+    --color-surface-secondary: var(--color-neutral-100);
+    --color-surface-tertiary: var(--color-neutral-200);
+    --color-surface-elevated: oklch(98% 0 0deg);
+
+    /* Invert text colors */
+    --color-text-primary: var(--color-neutral-950);
+    --color-text-secondary: var(--color-neutral-700);
+    --color-text-tertiary: var(--color-neutral-600);
+    --color-text-disabled: var(--color-neutral-400);
+    --color-text-inverse: var(--color-neutral-50);
+
+    /* Adjust overlays */
+    --color-hover-overlay: oklch(0% 0 0deg / 0.08);
+    --color-active-overlay: oklch(0% 0 0deg / 0.12);
+  }
+}
+
+/* Utility classes for OKLCH colors */
+.bg-primary { background-color: var(--color-primary-500); }
+.text-primary { color: var(--color-primary-500); }
+.border-primary { border-color: var(--color-primary-500); }
+
+.bg-glass-light { background-color: var(--glass-bg-light); }
+.bg-glass-medium { background-color: var(--glass-bg-medium); }
+.bg-glass-dark { background-color: var(--glass-bg-dark); }
+
+/* Animation performance optimization */
+.theme-transition {
+  transition-property: color, background-color, border-color, fill, stroke;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: color, background-color;
+}

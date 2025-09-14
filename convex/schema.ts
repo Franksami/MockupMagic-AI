@@ -302,20 +302,38 @@ export default defineSchema({
     .index("by_whop_transaction", ["whopTransactionId"])
     .index("by_created", ["createdAt"]),
 
-  // Feature Flags and Experiments
+  // Feature Flags and Experiments (Enhanced for Theme Migration)
   featureFlags: defineTable({
-    name: v.string(),
+    key: v.string(), // Unique identifier for the flag
+    name: v.optional(v.string()), // Human-readable name
     description: v.optional(v.string()),
     enabled: v.boolean(),
-    rolloutPercentage: v.number(),
+    rolloutPercentage: v.number(), // 0-100
+    userGroups: v.optional(v.array(v.string())), // Target specific user groups
     targetedUserIds: v.optional(v.array(v.id("users"))),
     targetedTiers: v.optional(v.array(v.string())),
     metadata: v.optional(v.any()),
     createdAt: v.number(),
     updatedAt: v.number(),
   })
-    .index("by_name", ["name"])
-    .index("by_enabled", ["enabled"]),
+    .index("by_key", ["key"])
+    .index("by_enabled", ["enabled"])
+    .index("by_rollout", ["enabled", "rolloutPercentage"]),
+
+  // Feature Flag User Overrides
+  featureFlagOverrides: defineTable({
+    userId: v.string(), // Can be whopUserId for flexibility
+    flagId: v.id("featureFlags"),
+    flagKey: v.string(), // Redundant but useful for queries
+    enabled: v.boolean(),
+    reason: v.optional(v.string()), // Why override was applied
+    expiresAt: v.optional(v.number()), // Temporary overrides
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  })
+    .index("by_user", ["userId"])
+    .index("by_flag", ["flagId"])
+    .index("by_user_flag", ["userId", "flagKey"]),
 
   // Community Template Sharing (Phase 2)
   communityTemplates: defineTable({

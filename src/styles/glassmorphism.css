@@ -1,0 +1,333 @@
+/**
+ * Glass Morphism Design System
+ * Modern frosted glass effects with backdrop filters
+ */
+
+/* Base glass morphism utilities */
+.glass {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: var(--glass-bg-medium);
+  border: 1px solid var(--glass-border);
+  transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glass variants */
+.glass-light {
+  backdrop-filter: blur(8px) saturate(150%);
+  -webkit-backdrop-filter: blur(8px) saturate(150%);
+  background: oklch(98% 0 0deg / 0.7);
+  border: 1px solid oklch(90% 0 0deg / 0.2);
+  box-shadow:
+    0 4px 6px -1px oklch(0% 0 0deg / 0.1),
+    0 2px 4px -1px oklch(0% 0 0deg / 0.06),
+    inset 0 1px 0 0 oklch(100% 0 0deg / 0.1);
+}
+
+.glass-medium {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: oklch(95% 0 0deg / 0.8);
+  border: 1px solid oklch(85% 0 0deg / 0.25);
+  box-shadow:
+    0 10px 15px -3px oklch(0% 0 0deg / 0.1),
+    0 4px 6px -2px oklch(0% 0 0deg / 0.05),
+    inset 0 1px 0 0 oklch(100% 0 0deg / 0.15);
+}
+
+.glass-dark {
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background: oklch(20% 0 0deg / 0.7);
+  border: 1px solid oklch(30% 0 0deg / 0.3);
+  box-shadow:
+    0 20px 25px -5px oklch(0% 0 0deg / 0.15),
+    0 10px 10px -5px oklch(0% 0 0deg / 0.04),
+    inset 0 1px 0 0 oklch(100% 0 0deg / 0.05);
+}
+
+/* Colored glass variants */
+.glass-primary {
+  backdrop-filter: blur(12px) saturate(200%);
+  -webkit-backdrop-filter: blur(12px) saturate(200%);
+  background: oklch(62% 0.20 30deg / 0.15);
+  border: 1px solid oklch(62% 0.20 30deg / 0.3);
+  box-shadow:
+    0 10px 40px -10px oklch(62% 0.20 30deg / 0.3),
+    inset 0 1px 0 0 oklch(100% 0 0deg / 0.1);
+}
+
+.glass-success {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: oklch(68% 0.15 145deg / 0.15);
+  border: 1px solid oklch(68% 0.15 145deg / 0.3);
+}
+
+.glass-warning {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: oklch(75% 0.15 85deg / 0.15);
+  border: 1px solid oklch(75% 0.15 85deg / 0.3);
+}
+
+.glass-error {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: oklch(62% 0.20 25deg / 0.15);
+  border: 1px solid oklch(62% 0.20 25deg / 0.3);
+}
+
+/* Interactive glass states */
+.glass-interactive {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-interactive::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    oklch(100% 0 0deg / 0.05) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-interactive:hover::before {
+  transform: translateX(100%);
+}
+
+.glass-interactive:hover {
+  backdrop-filter: blur(14px) saturate(200%);
+  -webkit-backdrop-filter: blur(14px) saturate(200%);
+  border-color: oklch(80% 0 0deg / 0.4);
+  box-shadow:
+    0 20px 40px -10px oklch(0% 0 0deg / 0.2),
+    inset 0 1px 0 0 oklch(100% 0 0deg / 0.2);
+}
+
+.glass-interactive:active {
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  transform: scale(0.98);
+}
+
+/* Glass card component */
+.glass-card {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: oklch(98% 0 0deg / 0.75);
+  border: 1px solid oklch(90% 0 0deg / 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow:
+    0 20px 25px -5px oklch(0% 0 0deg / 0.1),
+    0 10px 10px -5px oklch(0% 0 0deg / 0.04),
+    inset 0 1px 0 0 oklch(100% 0 0deg / 0.1);
+}
+
+/* Glass button */
+.glass-button {
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  background: oklch(98% 0 0deg / 0.8);
+  border: 1px solid oklch(85% 0 0deg / 0.3);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-button:hover {
+  backdrop-filter: blur(12px) saturate(200%);
+  -webkit-backdrop-filter: blur(12px) saturate(200%);
+  background: oklch(95% 0 0deg / 0.9);
+  border-color: oklch(80% 0 0deg / 0.4);
+  transform: translateY(-1px);
+  box-shadow:
+    0 10px 20px -5px oklch(0% 0 0deg / 0.15),
+    inset 0 1px 0 0 oklch(100% 0 0deg / 0.2);
+}
+
+.glass-button:active {
+  transform: translateY(0);
+  backdrop-filter: blur(8px) saturate(150%);
+  -webkit-backdrop-filter: blur(8px) saturate(150%);
+}
+
+/* Glass input */
+.glass-input {
+  backdrop-filter: blur(8px) saturate(150%);
+  -webkit-backdrop-filter: blur(8px) saturate(150%);
+  background: oklch(98% 0 0deg / 0.5);
+  border: 1px solid oklch(85% 0 0deg / 0.2);
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-input:focus {
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  background: oklch(98% 0 0deg / 0.7);
+  border-color: var(--color-primary-500);
+  outline: none;
+  box-shadow:
+    0 0 0 3px oklch(62% 0.20 30deg / 0.1),
+    inset 0 1px 0 0 oklch(100% 0 0deg / 0.1);
+}
+
+/* Glass modal/overlay */
+.glass-overlay {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: oklch(0% 0 0deg / 0.4);
+}
+
+.glass-modal {
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background: oklch(98% 0 0deg / 0.9);
+  border: 1px solid oklch(90% 0 0deg / 0.3);
+  border-radius: 20px;
+  box-shadow:
+    0 25px 50px -12px oklch(0% 0 0deg / 0.25),
+    inset 0 1px 0 0 oklch(100% 0 0deg / 0.15);
+}
+
+/* Glass navigation */
+.glass-nav {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: oklch(98% 0 0deg / 0.85);
+  border-bottom: 1px solid oklch(90% 0 0deg / 0.2);
+  box-shadow:
+    0 4px 6px -1px oklch(0% 0 0deg / 0.1),
+    inset 0 -1px 0 0 oklch(0% 0 0deg / 0.05);
+}
+
+/* Glass sidebar */
+.glass-sidebar {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: oklch(97% 0 0deg / 0.9);
+  border-right: 1px solid oklch(90% 0 0deg / 0.2);
+  box-shadow:
+    4px 0 6px -1px oklch(0% 0 0deg / 0.1),
+    inset -1px 0 0 0 oklch(0% 0 0deg / 0.05);
+}
+
+/* Performance optimizations */
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+  .glass,
+  .glass-light,
+  .glass-medium,
+  .glass-dark,
+  .glass-primary,
+  .glass-card,
+  .glass-button,
+  .glass-input,
+  .glass-modal,
+  .glass-nav,
+  .glass-sidebar {
+    will-change: backdrop-filter, background;
+  }
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(10px)) {
+  .glass,
+  .glass-light {
+    background: oklch(98% 0 0deg / 0.95);
+  }
+
+  .glass-medium {
+    background: oklch(95% 0 0deg / 0.98);
+  }
+
+  .glass-dark {
+    background: oklch(20% 0 0deg / 0.95);
+  }
+
+  .glass-primary {
+    background: oklch(62% 0.20 30deg / 0.25);
+  }
+
+  .glass-card {
+    background: oklch(98% 0 0deg / 0.98);
+  }
+
+  .glass-button {
+    background: oklch(98% 0 0deg / 0.95);
+  }
+
+  .glass-input {
+    background: oklch(98% 0 0deg / 0.9);
+  }
+
+  .glass-modal {
+    background: oklch(98% 0 0deg / 0.99);
+  }
+
+  .glass-nav {
+    background: oklch(98% 0 0deg / 0.97);
+  }
+
+  .glass-sidebar {
+    background: oklch(97% 0 0deg / 0.98);
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .glass-light {
+    background: oklch(15% 0 0deg / 0.7);
+    border-color: oklch(25% 0 0deg / 0.3);
+  }
+
+  .glass-medium {
+    background: oklch(18% 0 0deg / 0.8);
+    border-color: oklch(28% 0 0deg / 0.35);
+  }
+
+  .glass-card {
+    background: oklch(15% 0 0deg / 0.75);
+    border-color: oklch(25% 0 0deg / 0.3);
+  }
+
+  .glass-button {
+    background: oklch(18% 0 0deg / 0.8);
+    border-color: oklch(28% 0 0deg / 0.4);
+  }
+
+  .glass-input {
+    background: oklch(12% 0 0deg / 0.5);
+    border-color: oklch(22% 0 0deg / 0.3);
+  }
+
+  .glass-modal {
+    background: oklch(15% 0 0deg / 0.9);
+    border-color: oklch(25% 0 0deg / 0.4);
+  }
+
+  .glass-nav {
+    background: oklch(12% 0 0deg / 0.85);
+    border-color: oklch(22% 0 0deg / 0.3);
+  }
+
+  .glass-sidebar {
+    background: oklch(14% 0 0deg / 0.9);
+    border-color: oklch(24% 0 0deg / 0.3);
+  }
+}
