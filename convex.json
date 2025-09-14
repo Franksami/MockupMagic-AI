@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "dev": {
+      "name": "mockupmagic-ai-dev",
+      "productionUrl": "https://your-convex-deployment.convex.cloud",
+      "functions": "convex/"
+    },
+    "prod": {
+      "name": "mockupmagic-ai",
+      "productionUrl": "https://your-convex-deployment.convex.cloud",
+      "functions": "convex/"
+    }
+  },
+  "currentProject": "dev"
+}
